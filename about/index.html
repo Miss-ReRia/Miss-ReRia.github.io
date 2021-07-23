@@ -38,6 +38,9 @@
 
   <!-- import link -->
   
+  
+  <link rel="stylesheet" href="/css/iconfont.css">
+  
 
   
     
@@ -138,7 +141,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     id="home"
                   >
-                  <i class='fas fa-rss fa-fw'></i>博客
+                  <i class='fas fa-fan fa-spin fa-fw fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -262,7 +265,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     id="home"
                   >
-                  <i class='fas fa-rss fa-fw'></i>博客
+                  <i class='fas fa-fan fa-spin fa-fw fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -793,6 +796,8 @@ var loadCSS = function( href, before, media, attributes ){
   
   loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
   
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
   
   
   
@@ -1620,3 +1625,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
     </div>
   </body>
 </html>
+
+
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>

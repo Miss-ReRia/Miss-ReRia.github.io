@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2696984 */
+  src: url('//at.alicdn.com/t/font_2696984_d1eptwpuw5q.woff2?t=1627051805420') format('woff2'),
+       url('//at.alicdn.com/t/font_2696984_d1eptwpuw5q.woff?t=1627051805420') format('woff'),
+       url('//at.alicdn.com/t/font_2696984_d1eptwpuw5q.ttf?t=1627051805420') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-books:before {
+  content: "\e67a";
+}
+
+.icon-chats:before {
+  content: "\e67b";
+}
+
+.icon-calendar:before {
+  content: "\e67c";
+}
+
+.icon-cloud:before {
+  content: "\e67d";
+}
+
+.icon-colorplate:before {
+  content: "\e67e";
+}
+
+.icon-files:before {
+  content: "\e67f";
+}
+
+.icon-library:before {
+  content: "\e680";
+}
+
+.icon-gold:before {
+  content: "\e681";
+}
+
+.icon-mall:before {
+  content: "\e682";
+}
+
+.icon-games:before {
+  content: "\e683";
+}
+
+.icon-medal:before {
+  content: "\e684";
+}
+
+.icon-plan:before {
+  content: "\e685";
+}
+
+.icon-lock:before {
+  content: "\e686";
+}
+
+.icon-navigation:before {
+  content: "\e687";
+}
+
+.icon-task_:before {
+  content: "\e688";
+}
+
+.icon-gift:before {
+  content: "\e689";
+}
+
+.icon-tags:before {
+  content: "\e68a";
+}
+
+.icon-works:before {
+  content: "\e68b";
+}
+
+.icon-trash:before {
+  content: "\e6bf";
+}
+
+.icon-medal1:before {
+  content: "\e6c2";
+}
+
