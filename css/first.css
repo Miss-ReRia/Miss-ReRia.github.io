@@ -50,7 +50,7 @@
   --color-p: #444;
   --color-list: #666;
   --color-list-hl: #36ac91;
-  --color-meta: #005158;
+  --color-meta: #888;
 }
 * {
   box-sizing: border-box;
@@ -1416,8 +1416,8 @@ ul.list-v >li>a:hover {
   }
 }
 #u-search {
-  display: none;
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;

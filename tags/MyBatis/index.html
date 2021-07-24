@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -42,6 +42,7 @@
   
   
   <link rel="stylesheet" href="/css/iconfont.css">
+  <link rel="stylesheet" href="/css/myIconColor.css">
   
 
   
@@ -103,6 +104,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </noscript>
 
 </head>
+
 
   <body>
     
@@ -235,6 +237,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/artitalk/
+                  
+                  
+                  
+                    id="artitalk"
+                  >
+                  <i class='fas fa-comment-dots fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn">
                   <i class='fas fa-moon fa-fw'></i>开/关灯
                 </a>
@@ -248,7 +266,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fas fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
+          <input type="text" class="input u-search-input" placeholder="要搜什么呢？" />
         </form>
       </div>
 
@@ -359,6 +377,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/artitalk/
+                  
+                  
+                  
+                    id="artitalk"
+                  >
+                  <i class='fas fa-comment-dots fa-fw'></i>说说
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
                 <a class="menuitem flat-box header toggle-mode-btn">
                   <i class='fas fa-moon fa-fw'></i>开/关灯
                 </a>
@@ -374,11 +408,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </header>
 
-    <div id="l_body">
-      <div id="l_cover">
+      <div id="l_body">
+        <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="half" class='cover-wrapper  search' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -391,6 +425,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
   </div>
   <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="☜(ﾟヮﾟ☜)在这里输入你要查找的内容哦" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
     <div class='menu navigation'>
       <div class='list-h'>
         
@@ -399,28 +441,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               id="home">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
+              <p>博客</p>
             </a>
           
             <a href="/categories/"
               
               
               id="categories">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>分类</p>
+              <p>分类</p>
             </a>
           
             <a href="/tags/"
               
               
               id="tags">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>标签</p>
+              <p>标签</p>
             </a>
           
             <a href="/archives/"
               
               
               id="archives">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>归档</p>
+              <p>归档</p>
             </a>
           
         
@@ -435,9 +477,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   </div>
 
-      <div id="safearea">
-        <div class="body-wrapper" id="pjax-container">
-          
+          <div id="safearea">
+            <div class="body-wrapper" id="pjax-container">
+              
 
 
 <div class='l_main'>
@@ -713,8 +755,8 @@ mybatis通过xm或注解的方式将要执行的各种 statement配置起来,并
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Fri Jul 23 2021 23:57:44 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-07-23 日</div>
+            <div id="last-update" style="display: none;">Sat Jul 24 2021 13:30:44 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2021-07-24 日</div>
           
         </div>
         
@@ -764,7 +806,7 @@ mybatis通过xm或注解的方式将要执行的各种 statement配置起来,并
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-07-23 日';
+            document.getElementById('last-update-show').innerHTML = '2021-07-24 日';
           }
         </script>
         
@@ -779,8 +821,8 @@ mybatis通过xm或注解的方式将要执行的各种 statement配置起来,并
 </aside>
 
 
-		  
-		  <!--此文件用来存放一些不方便取值的变量-->
+                
+                      <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <script>
@@ -804,29 +846,11 @@ mybatis通过xm或注解的方式将要执行的各种 statement配置起来,并
   
 </script>
 
-        </div>
-        
+            </div>
+            
   
   <footer class="footer clearfix">
     <br><br>
-    
-      
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
-</div>
-      
-    
-      
-        本站使用
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
-        作为主题
-      
-    
-      
-        <div class='copyright'>
-        <p><a href="/">Copyright © 2021-2022 XXX</a></p>
-
-        </div>
-      
     
       
         
@@ -838,11 +862,11 @@ mybatis通过xm或注解的方式将要执行的各种 statement配置起来,并
   </footer>
 
 
-        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+              <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+          </div>
       </div>
-    </div>
-    <div>
-      <script>
+      <div>
+        <script>
 /************这个文件存放不需要重载的全局变量和全局函数*********/
 window.volantis={};
 window.volantis.loadcss=document.getElementById("loadcss");
@@ -1298,6 +1322,8 @@ function listenSearch(){
 function setSearchService() {
 	listenSearch();
 	
+		document.addEventListener("pjax:success", listenSearch);
+	
 }
 </script>
 
@@ -1702,9 +1728,9 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
 <!-- more -->
 
- 
-	   
-	    
+
+          
+            
 
 
 <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
@@ -1732,7 +1758,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       try {
         var currentUrl = window.location.pathname;
         var targetUrl = e.triggerElement.href;
-        var banUrl = [""];
+        var banUrl = ["/artitalk/", "/bb/"];
         if (banUrl[0] != "") {
           banUrl.forEach(item => {
             if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
@@ -1780,12 +1806,16 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       window.location.href = e.triggerElement.href;
     });
 </script>
- 
-	  
-    </div>
+
+              
+      </div>
   </body>
+
 </html>
 
+
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
 
 <!--单击显示文字-->
 <script type="text/javascript" src="/js/click_show_text.js"></script>
