@@ -35,7 +35,7 @@
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
   --color-site-inner: #fff;
-  --color-site-footer: #2196f3;
+  --color-site-footer: #44d7b6;
   --color-card: #fff;
   --color-text: #444;
   --color-block: #f6f6f6;
@@ -50,7 +50,7 @@
   --color-p: #444;
   --color-list: #666;
   --color-list-hl: #36ac91;
-  --color-meta: #888;
+  --color-meta: #777;
 }
 * {
   box-sizing: border-box;
@@ -75,10 +75,10 @@ html >::-webkit-scrollbar-track-piece {
 html >::-webkit-scrollbar-thumb {
   background: #44d7b6;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 html >::-webkit-scrollbar-thumb:hover {
-  background: #44d7b6;
+  background: #ff7043;
 }
 body {
   background-color: var(--color-site-body);
@@ -101,10 +101,10 @@ body.modal-active {
   }
 }
 ::-moz-selection {
-  background: rgba(33,150,243,0.2);
+  background: rgba(255,112,67,0.2);
 }
 ::selection {
-  background: rgba(33,150,243,0.2);
+  background: rgba(255,112,67,0.2);
 }
 h1 {
   font-size: 1.5rem;
@@ -141,7 +141,7 @@ a {
   -o-transition: all 0.28s ease;
 }
 a:hover {
-  color: #44d7b6;
+  color: #ff7043;
 }
 a:active,
 a:hover {
@@ -628,7 +628,7 @@ th {
   -webkit-appearance: none;
   padding-left: 36px;
   border-radius: 1.4rem;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.8);
   backdrop-filter: blur(10px);
   border: none;
   color: var(--color-text);
@@ -808,7 +808,7 @@ th {
     border-radius: 0;
   }
   .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #44d7b6;
+    background: #ff7043;
   }
 }
 @supports (backdrop-filter: blur(20px)) {
@@ -1643,7 +1643,7 @@ ul.list-v >li>a:hover {
   z-index: 1;
 }
 #u-search .modal-footer .nav:hover {
-  color: #44d7b6;
+  color: #ff7043;
 }
 #u-search .modal-footer .nav.btn-next {
   margin-left: 16px;
@@ -1676,7 +1676,7 @@ ul.list-v >li>a:hover {
   border-radius: 2px;
 }
 #u-search .modal-body::-webkit-scrollbar-thumb:hover {
-  background: #44d7b6;
+  background: #ff7043;
 }
 #u-search .modal-body .modal-results {
   list-style: none;
@@ -1758,8 +1758,8 @@ ul.list-v >li>a:hover {
     --color-p: #bbb;
     --color-list: #aaa;
     --color-list-hl: #69dfc4;
-    --color-meta: #888;
-    --color-link: #888;
+    --color-meta: #999;
+    --color-link: #999;
   }
   :root:not([data-user-color-scheme]) .backstretch {
     background-color: #282c34 !important;
@@ -1909,8 +1909,8 @@ ul.list-v >li>a:hover {
   --color-p: #bbb;
   --color-list: #aaa;
   --color-list-hl: #69dfc4;
-  --color-meta: #888;
-  --color-link: #888;
+  --color-meta: #999;
+  --color-link: #999;
 }
 [data-user-color-scheme='dark'] .backstretch {
   background-color: #282c34 !important;

@@ -1,6 +1,6 @@
 /* 风车 */
 .fa-fan{
-    color: #64B5F6;
+    color: #D4646B;
 }
 /* 分类 */
 .fa-folder-open{
@@ -16,7 +16,7 @@ color: #BF360C;
 }
 
 .fa-link{
-color: #636267;
+color: #64B5F6;
 }
 
 .fa-info-circle{
@@ -32,19 +32,19 @@ color: #EEDD68;
 }
 
 .fa-calendar-alt{
-color: #EF9A9A;
+color: #4A8FA1;
 }
 
 .fa-edit{
-color: #3949AB;
+color: #00897B;
 }
 
 .fa-eye{
-color: #FFAB91;
+color: #424242;
 }
 
 .fa-hashtag{
-color: #5D4037;
+color: #64B5F6;
 }
 
 .fa-comments{
@@ -52,7 +52,7 @@ color: #0277BD;
 }
 
 .fa-envelope{
-color: #EEEEEE;
+color: #D7CCC8;
 }
 
 .fa-github{
@@ -77,4 +77,13 @@ color: #e66554;
 
 .fa-search{
     color: #FBC02D;
+}
+
+.cover-wrapper .cover-body .m_search .fa-search,
+.l_header .m_search .fa-search{
+    color: #FBC02D !important;
+}
+
+.fa-map-signs{
+    color: #29b3b3;
 }

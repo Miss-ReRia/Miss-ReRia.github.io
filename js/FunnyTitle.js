@@ -9,7 +9,7 @@ document.addEventListener('visibilitychange', function () {
     }
     else {
         // $('[rel="icon"]').attr('href', "/favicon.ico");
-        document.title = 'Σ(っ °Д °;)っ 被发现了' + OriginTitle;
+        document.title = 'Σ(っ °Д °;)っ 被发现了';
         titleTime = setTimeout(function () {
             document.title = OriginTitle;
         }, 2000);
