@@ -79,11 +79,15 @@ color: #e66554;
     color: #FBC02D;
 }
 
+.fa-map-signs{
+    color: #29b3b3;
+}
+
+.fa-compact-disc{
+    color: #CE93D8;
+}
+
 .cover-wrapper .cover-body .m_search .fa-search,
 .l_header .m_search .fa-search{
     color: #FBC02D !important;
-}
-
-.fa-map-signs{
-    color: #29b3b3;
 }
