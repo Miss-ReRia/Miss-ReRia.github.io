@@ -124,7 +124,7 @@
 .md div.btns p,
 .article div.btns a,
 .md div.btns a {
-  font-size: 0.8125rem;
+  font-size: 0.86rem;
   color: var(--color-p);
 }
 .article div.btns b,
@@ -899,7 +899,7 @@ img.inline {
 .md .link-card p.url {
   flex-shrink: 0;
   color: var(--color-meta);
-  font-size: 0.8125rem;
+  font-size: 0.86rem;
 }
 .md .link-group {
   display: grid;
@@ -1740,7 +1740,7 @@ pre {
   margin: 1em 0;
   display: block;
   background: var(--color-block);
-  font-size: 0.8125rem;
+  font-size: 0.86rem;
   font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
   border-radius: 4px;
   line-height: 1.5;
@@ -2230,7 +2230,7 @@ div.fancybox .gallery {
   overflow: hidden;
 }
 div.fancybox .image-caption {
-  font-size: 0.8125rem;
+  font-size: 0.86rem;
   padding-top: 0.5em;
   padding-bottom: 1em;
   color: var(--color-meta);
@@ -2895,7 +2895,7 @@ article#tag .all-tags ul li span:before {
   margin-bottom: 1em;
   overflow: auto;
   background: var(--color-codeblock);
-  font-size: 0.8125rem;
+  font-size: 0.86rem;
   font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
   border: 1px solid #ffebcb;
   padding: 16px;
@@ -3154,7 +3154,7 @@ footer.footer {
 }
 footer.footer,
 footer.footer p {
-  font-size: 0.8125rem;
+  font-size: 0.86rem;
 }
 footer.footer .licenses {
   color: fade(, 50%);
@@ -3292,7 +3292,7 @@ footer.footer .copyright p {
   margin: 0;
 }
 .article.l_friends .friends-group .friend-content .friend-card .friend-right p.friend-name {
-  font-size: 0.8125rem;
+  font-size: 0.86rem;
   padding-top: 4px;
   font-weight: bold;
 }
@@ -3343,7 +3343,7 @@ footer.footer .copyright p {
 .md .img-wrap .image-caption {
   display: block;
   margin: 0.75rem auto;
-  font-size: 0.8125rem;
+  font-size: 0.86rem;
   color: var(--color-meta);
 }
 .md .img-wrap .image-caption:empty {
@@ -3572,7 +3572,7 @@ footer.footer .copyright p {
 .l_main .post .article-meta .new-meta-box,
 .l_main .post .article-meta .new-meta-box p,
 .l_main .post .article-meta .new-meta-box i {
-  font-size: 0.8125rem;
+  font-size: 0.86rem;
 }
 .l_main .post .article-meta .new-meta-box .new-meta-item {
   color: var(--color-meta);

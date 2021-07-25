@@ -1715,7 +1715,7 @@ ul.list-v >li>a:hover {
   overflow: hidden;
   word-break: break-all;
   text-overflow: ellipsis;
-  font-size: 0.8125rem;
+  font-size: 0.86rem;
   color: var(--color-meta);
 }
 #u-search .modal-body .modal-results .result .icon {
