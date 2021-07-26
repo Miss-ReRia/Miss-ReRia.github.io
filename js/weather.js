@@ -1,1 +1,1 @@
-document.writeln("<iframe scrolling=\'no\' src=\'https://tianqiapi.com/api.php?style=tv&skin=cucumber&align=center&paddingtop=4\' frameborder=\'0\' width=\'200\' height=\'25\' allowtransparency=\'true\'></iframe>");
+document.writeln("<iframe scrolling=\'no\' src=\'https://tianqiapi.com/api.php?style=tv&skin=cucumber&align=center&paddingtop=4\' frameborder=\'0\' width=\'125\' height=\'27\' allowtransparency=\'true\'></iframe>");
