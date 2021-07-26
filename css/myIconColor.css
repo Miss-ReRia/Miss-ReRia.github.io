@@ -100,12 +100,16 @@ color: #e66554;
     color: #EF5350;
 }
 
-.icon-bilibili1{
+.icon-bilibili{
     color: #e76a8d;
 }
 
 .icon-gift{
     color: #D32F2F;
+}
+
+.icon-27shijianxian{
+    color: #4DB6AC;
 }
 
 .cover-wrapper .cover-body .m_search .fa-search,
