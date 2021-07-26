@@ -3,7 +3,7 @@
     color: #D4646B;
 }
 
-.fa-bookmark{
+.fa-paper-plane{
     color: #FF8A65;
 }
 
@@ -94,6 +94,10 @@ color: #e66554;
 
 .fa-compact-disc{
     color: #CE93D8;
+}
+
+.fa-bullhorn{
+    color: #EF5350;
 }
 
 .cover-wrapper .cover-body .m_search .fa-search,
