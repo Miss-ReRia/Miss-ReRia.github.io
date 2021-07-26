@@ -4,7 +4,7 @@
 }
 
 .fa-paper-plane{
-    color: #FF8A65;
+    color: #64B5F6;
 }
 
 .fa-train{
@@ -98,6 +98,14 @@ color: #e66554;
 
 .fa-bullhorn{
     color: #EF5350;
+}
+
+.icon-bilibili1{
+    color: #e76a8d;
+}
+
+.icon-gift{
+    color: #D32F2F;
 }
 
 .cover-wrapper .cover-body .m_search .fa-search,
