@@ -181,7 +181,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="categories"
                                                   >
-                                                    <i class='fas fa-folder-open fa-fw'></i>
+                                                    <i class='fad fa-folder-open fa-fw'></i>
                                                       
                                                         分类
                                 </a>
@@ -199,7 +199,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="tags"
                                                   >
-                                                    <i class='fas fa-tags fa-fw'></i>
+                                                    <i class='fad fa-tags fa-fw'></i>
                                                       
                                                         标签
                                 </a>
@@ -347,7 +347,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="friends"
                                                   >
-                                                    <i class='fas fa-link fa-fw'></i>
+                                                    <i class='fad fa-link fa-fw'></i>
                                                       
                                                         友链
                                 </a>
@@ -400,7 +400,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       volume='0.5'
       loop='all'
       order='list'
-      fixed='false'
+      fixed='true'
       list-max-height='320px'
       server='netease'
       type='playlist'
@@ -493,7 +493,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="categories"
                                                   >
-                                                    <i class='fas fa-folder-open fa-fw'></i>
+                                                    <i class='fad fa-folder-open fa-fw'></i>
                                                       
                                                         分类
                                 </a>
@@ -511,7 +511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="tags"
                                                   >
-                                                    <i class='fas fa-tags fa-fw'></i>
+                                                    <i class='fad fa-tags fa-fw'></i>
                                                       
                                                         标签
                                 </a>
@@ -659,7 +659,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="friends"
                                                   >
-                                                    <i class='fas fa-link fa-fw'></i>
+                                                    <i class='fad fa-link fa-fw'></i>
                                                       
                                                         友链
                                 </a>
@@ -847,8 +847,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <p>本站默认替换了右键菜单，</p>
-<p>如需唤醒原系统菜单请使用：<br>        <kbd>ctrol</kbd> + <kbd>右键</kbd></p>
+  <p>本站默认替换了右键菜单，<br>如需唤醒原系统菜单请使用：<br>        <kbd>ctrl</kbd> + <kbd>右键</kbd></p>
 
   
   
@@ -860,10 +859,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-07-26T12:36:37+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-07-27T09:47:04+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年7月26日</p>
+    <p>更新于：2021年7月27日</p>
   </a>
 </div>
 
@@ -940,7 +939,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   <article class="post white-box reveal shadow floatable" id="comments">
-    <p ct><i class='fas fa-comments'></i> 评论</p>
+    <p ct><i class='fad fa-comments'></i> 评论</p>
     
     <div id="valine_container" class="valine_thread">
   <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
@@ -1073,7 +1072,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       volume='0.5'
       loop='all'
       order='list'
-      fixed='false'
+      fixed='true'
       list-max-height='320px'
       server='netease'
       type='playlist'
@@ -1212,7 +1211,7 @@ var loadCSS = function( href, before, media, attributes ){
 </script>
 <script>
   
-  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  loadCSS("https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css", window.volantis.loadcss);
   
   
   loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
@@ -2245,7 +2244,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       try {
         var currentUrl = window.location.pathname;
         var targetUrl = e.triggerElement.href;
-        var banUrl = ["/artitalk/", "/bb/"];
+        var banUrl = ["/artitalk/", "/bb/", "/bangumis/"];
         if (banUrl[0] != "") {
           banUrl.forEach(item => {
             if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {

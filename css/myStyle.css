@@ -9,3 +9,8 @@
 /* .aplayer .aplayer-icon-back, .aplayer .aplayer-icon-forward, .aplayer .aplayer-icon-lrc, .aplayer .aplayer-icon-order, .aplayer .aplayer-icon-play{
     display: inline !important;
 } */
+
+.md h2{
+    background: linear-gradient(to bottom, transparent 65%, #4bdebd8a 0) no-repeat;
+    display: initial;
+}

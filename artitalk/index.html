@@ -179,7 +179,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="categories"
                                                   >
-                                                    <i class='fas fa-folder-open fa-fw'></i>
+                                                    <i class='fad fa-folder-open fa-fw'></i>
                                                       
                                                         分类
                                 </a>
@@ -197,7 +197,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="tags"
                                                   >
-                                                    <i class='fas fa-tags fa-fw'></i>
+                                                    <i class='fad fa-tags fa-fw'></i>
                                                       
                                                         标签
                                 </a>
@@ -345,7 +345,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="friends"
                                                   >
-                                                    <i class='fas fa-link fa-fw'></i>
+                                                    <i class='fad fa-link fa-fw'></i>
                                                       
                                                         友链
                                 </a>
@@ -398,7 +398,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       volume='0.5'
       loop='all'
       order='list'
-      fixed='false'
+      fixed='true'
       list-max-height='320px'
       server='netease'
       type='playlist'
@@ -491,7 +491,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="categories"
                                                   >
-                                                    <i class='fas fa-folder-open fa-fw'></i>
+                                                    <i class='fad fa-folder-open fa-fw'></i>
                                                       
                                                         分类
                                 </a>
@@ -509,7 +509,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="tags"
                                                   >
-                                                    <i class='fas fa-tags fa-fw'></i>
+                                                    <i class='fad fa-tags fa-fw'></i>
                                                       
                                                         标签
                                 </a>
@@ -657,7 +657,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                               
                                                 id="friends"
                                                   >
-                                                    <i class='fas fa-link fa-fw'></i>
+                                                    <i class='fad fa-link fa-fw'></i>
                                                       
                                                         友链
                                 </a>
@@ -918,7 +918,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       volume='0.5'
       loop='all'
       order='list'
-      fixed='false'
+      fixed='true'
       list-max-height='320px'
       server='netease'
       type='playlist'
@@ -1057,7 +1057,7 @@ var loadCSS = function( href, before, media, attributes ){
 </script>
 <script>
   
-  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  loadCSS("https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css", window.volantis.loadcss);
   
   
   loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
@@ -2090,7 +2090,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       try {
         var currentUrl = window.location.pathname;
         var targetUrl = e.triggerElement.href;
-        var banUrl = ["/artitalk/", "/bb/"];
+        var banUrl = ["/artitalk/", "/bb/", "/bangumis/"];
         if (banUrl[0] != "") {
           banUrl.forEach(item => {
             if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
