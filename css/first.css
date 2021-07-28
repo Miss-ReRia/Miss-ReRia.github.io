@@ -41,8 +41,8 @@
   --color-block: #f6f6f6;
   --color-inlinecode: #c74f00;
   --color-codeblock: #fff7ea;
-  --color-h1: #005158;
-  --color-h2: #333;
+  --color-h1: #3a3a3a;
+  --color-h2: #3a3a3a;
   --color-h3: #333;
   --color-h4: #444;
   --color-h5: #555;
@@ -78,7 +78,7 @@ html >::-webkit-scrollbar-thumb {
   border-radius: 3px;
 }
 html >::-webkit-scrollbar-thumb:hover {
-  background: #44d7b6;
+  background: #ff5722;
 }
 body {
   background-color: var(--color-site-body);
@@ -141,7 +141,7 @@ a {
   -o-transition: all 0.28s ease;
 }
 a:hover {
-  color: #44d7b6;
+  color: #ff5722;
 }
 a:active,
 a:hover {
@@ -808,7 +808,7 @@ th {
     border-radius: 0;
   }
   .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #44d7b6;
+    background: #ff5722;
   }
 }
 @supports (backdrop-filter: blur(20px)) {
@@ -1643,7 +1643,7 @@ ul.list-v >li>a:hover {
   z-index: 1;
 }
 #u-search .modal-footer .nav:hover {
-  color: #44d7b6;
+  color: #ff5722;
 }
 #u-search .modal-footer .nav.btn-next {
   margin-left: 16px;
@@ -1676,7 +1676,7 @@ ul.list-v >li>a:hover {
   border-radius: 2px;
 }
 #u-search .modal-body::-webkit-scrollbar-thumb:hover {
-  background: #44d7b6;
+  background: #ff5722;
 }
 #u-search .modal-body .modal-results {
   list-style: none;
@@ -1749,7 +1749,7 @@ ul.list-v >li>a:hover {
     --color-block: #3a3a3a;
     --color-codeblock: #343a3c;
     --color-inlinecode: #d56d28;
-    --color-h1: #00838f;
+    --color-h1: #eee;
     --color-h2: #eee;
     --color-h3: #ddd;
     --color-h4: #ddd;
@@ -1927,7 +1927,7 @@ ul.list-v >li>a:hover {
   --color-block: #3a3a3a;
   --color-codeblock: #343a3c;
   --color-inlinecode: #d56d28;
-  --color-h1: #00838f;
+  --color-h1: #eee;
   --color-h2: #eee;
   --color-h3: #ddd;
   --color-h4: #ddd;

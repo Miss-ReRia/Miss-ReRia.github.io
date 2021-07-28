@@ -1,5 +1,6 @@
 /* 风车 */
-.fa-fan{
+.fa-fan,
+.fa-home{
     color: #D4646B;
 }
 
@@ -110,6 +111,10 @@ color: #e66554;
 
 .icon-27shijianxian{
     color: #4DB6AC;
+}
+
+.fa-external-link-square-alt{
+    color: #F06292;
 }
 
 .cover-wrapper .cover-body .m_search .fa-search,
