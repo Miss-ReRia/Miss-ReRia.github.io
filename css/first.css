@@ -41,7 +41,7 @@
   --color-block: #f6f6f6;
   --color-inlinecode: #c74f00;
   --color-codeblock: #fff7ea;
-  --color-h1: #3a3a3a;
+  --color-h1: #006064;
   --color-h2: #3a3a3a;
   --color-h3: #333;
   --color-h4: #444;
@@ -1749,7 +1749,7 @@ ul.list-v >li>a:hover {
     --color-block: #3a3a3a;
     --color-codeblock: #343a3c;
     --color-inlinecode: #d56d28;
-    --color-h1: #eee;
+    --color-h1: #006064;
     --color-h2: #eee;
     --color-h3: #ddd;
     --color-h4: #ddd;
@@ -1927,7 +1927,7 @@ ul.list-v >li>a:hover {
   --color-block: #3a3a3a;
   --color-codeblock: #343a3c;
   --color-inlinecode: #d56d28;
-  --color-h1: #eee;
+  --color-h1: #006064;
   --color-h2: #eee;
   --color-h3: #ddd;
   --color-h4: #ddd;
