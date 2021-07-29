@@ -11,7 +11,7 @@
 } */
 
 .md h2{
-    background: linear-gradient(to bottom, transparent 65%, #4bdebd8a 0) no-repeat;
+    background: linear-gradient(to bottom, transparent 65%, #86e2cda1 0) no-repeat;
     display: initial;
 }
 
@@ -38,4 +38,8 @@
 
 .md h1:before, .md h2:before{
     margin-top: -50px !important;
+}
+
+.md h4:before{
+    margin-top: -85px !important;
 }

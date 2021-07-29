@@ -1390,7 +1390,7 @@ p.p.h3 {
 }
 span.p.h4,
 p.p.h4 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--color-h4);
   padding-top: 2em;
 }
@@ -3960,7 +3960,7 @@ footer.footer .copyright p {
 article#comments p[ct] {
   margin-top: 0;
   margin-bottom: 1em;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--color-text);
   font-weight: 600;
 }
