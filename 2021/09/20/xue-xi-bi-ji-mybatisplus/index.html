@@ -24,7 +24,7 @@
   
   <title>【学习笔记】MyBatisPlus - Reria&#39;s BLOG</title>
   
-    <meta name="keywords" content="mybatisplus,学习,ssm">
+    <meta name="keywords" content="MyBatisPlus,学习,ssm">
   
 
   
@@ -840,7 +840,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：5分钟</p>
+      <p>时长：6分钟</p>
     </a>
   </div>
 
@@ -875,7 +875,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="快速创建工程"><a href="#快速创建工程" class="headerlink" title="快速创建工程"></a>快速创建工程</h2><h3 id="创建springboot工程"><a href="#创建springboot工程" class="headerlink" title="创建springboot工程"></a>创建springboot工程</h3><blockquote>
 <p>new project -&gt; spring Initializr</p>
 </blockquote>
-<h3 id="mybatisplus依赖"><a href="#mybatisplus依赖" class="headerlink" title="mybatisplus依赖"></a>mybatisplus依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.3.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="mybatisplus依赖"><a href="#mybatisplus依赖" class="headerlink" title="mybatisplus依赖"></a>mybatisplus依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.3.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- velocity 模板引擎, Mybatis Plus 代码生成器需要 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.velocity<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>velocity-engine-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="配置application-properties"><a href="#配置application-properties" class="headerlink" title="配置application.properties"></a>配置application.properties</h3><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.datasource.driver-class-name</span>=<span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line"><span class="meta">spring.datasource.url</span>=<span class="string">jdbc:mysql://localhost:3306/mybatis_plus?serverTimezone=GMT%2B8</span></span><br><span class="line"><span class="meta">spring.datasource.username</span>=<span class="string">root</span></span><br><span class="line"><span class="meta">spring.datasource.password</span>=<span class="string">123456789</span></span><br><span class="line"><span class="comment"># mybatis日志，可以查看更多详细信息</span></span><br><span class="line"><span class="meta">mybatis-plus.configuration.log-impl</span>=<span class="string">org.apache.ibatis.logging.stdout.StdOutImpl</span></span><br></pre></td></tr></table></figure>
 
@@ -1002,10 +1002,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-09-20T15:42:44+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-09-23T17:58:17+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年9月20日</p>
+    <p>更新于：2021年9月23日</p>
   </a>
 </div>
 
@@ -1014,7 +1014,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/mybatisplus/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>mybatisplus</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>学习</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ssm/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>ssm</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MyBatisPlus/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MyBatisPlus</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>学习</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ssm/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>ssm</p></a></div>
 
 
         
@@ -1083,18 +1083,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2021/09/21/xiang-mu-bi-ji-zai-xian-jiao-yu-xiang-mu-shi-zhan-2/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【项目笔记】在线教育项目实战2</p>
-          <p class='content'>前端技术点简单介绍vscode
+          <p class='content'>前端技术点简单介绍
+一下技术点详见其官方文档或者课件，我就瞄了几眼，之前多多少少也学过了 
 
-新建一个空文件夹
-用VSCode打开该文件夹
-选择菜单栏 文件 -&gt; 将文件夹另存为工作区 即可
+ES6
+Vue
+axios
+node.js
+babel
+模块化
+webpack
 
 
-ES6介绍
-详细看课件
-
-Vue介绍
-详细看课件和之...</p>
+搭建前端环境与框...</p>
         </a>
       
       
@@ -1173,6 +1174,14 @@ Vue介绍
     
       
     
+      
+    
+    
+      
+    
+      
+    
+      
     
       
     
