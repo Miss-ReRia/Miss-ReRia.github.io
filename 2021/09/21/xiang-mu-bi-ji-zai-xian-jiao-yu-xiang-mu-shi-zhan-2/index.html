@@ -1098,7 +1098,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="配置application-properties"><a href="#配置application-properties" class="headerlink" title="配置application.properties"></a>配置application.properties</h4><blockquote>
 <p>aliyun.oss.file后配置阿里云OSS和AccessKey相关信息</p>
 </blockquote>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">server.port</span>=<span class="string">8002</span></span><br><span class="line"><span class="meta">spring.application.name</span>=<span class="string">service-oss</span></span><br><span class="line"><span class="meta">spring.profiles.active</span>=<span class="string">dev</span></span><br><span class="line"><span class="meta">aliyun.oss.file.endpoint</span>=<span class="string">oss-cn-beijing.aliyuncs.com</span></span><br><span class="line"><span class="meta">aliyun.oss.file.keyid</span>=<span class="string">LTAI5t8wxvXoRYsyee2UuEGJ</span></span><br><span class="line"><span class="meta">aliyun.oss.file.keysecret</span>=<span class="string">laFhWxDICudMW59mYUO7Hpd3FTR2FQ</span></span><br><span class="line"><span class="meta">aliyun.oss.file.bucketname</span>=<span class="string">demo-edu-guli</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">server.port</span>=<span class="string">8002</span></span><br><span class="line"><span class="meta">spring.application.name</span>=<span class="string">service-oss</span></span><br><span class="line"><span class="meta">spring.profiles.active</span>=<span class="string">dev</span></span><br><span class="line"><span class="meta">aliyun.oss.file.endpoint</span>=<span class="string">oss-cn-beijing.aliyuncs.com</span></span><br><span class="line"><span class="meta">aliyun.oss.file.keyid</span>=<span class="string"></span></span><br><span class="line"><span class="meta">aliyun.oss.file.keysecret</span>=<span class="string"></span></span><br><span class="line"><span class="meta">aliyun.oss.file.bucketname</span>=<span class="string">demo-edu-guli</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="创建启动类"><a href="#创建启动类" class="headerlink" title="创建启动类"></a>创建启动类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.atguigu.oss;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.ComponentScan;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@ComponentScan(basePackages = &#123;&quot;com.atguigu&quot;&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OssApplication</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(OssApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1288,10 +1288,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-09-24T10:41:54+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-10-08T19:41:58+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年9月24日</p>
+    <p>更新于：2021年10月8日</p>
   </a>
 </div>
 
@@ -1435,10 +1435,6 @@ new project -&gt; spring Initiali...</p>
       
     
       
-    
-      
-    
-      
         <article id="page" class="post article-type-page" itemscope itemprop="blogPost">
           <section class="article typo">
             <div class="article-entry" itemprop="articleBody">
@@ -1449,6 +1445,10 @@ new project -&gt; spring Initiali...</p>
             </div>
           </section>
         </article>
+      
+    
+      
+    
       
     
       
