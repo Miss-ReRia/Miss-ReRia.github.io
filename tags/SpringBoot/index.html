@@ -841,13 +841,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md'>
     
       
-        统计分析模块
+        统计分析后台（后端+前端）环境搭建
+老样子
 
-统计数据表
+生成统计数据（后端）
+注意，要查询什么数据要在对应模块中查询，然后在统计模块远程调用获取
 
-
-
-
+被调用方controller12345678910111213@RestController@RequestMapping(&quot;/educenter/member&quot;)@CrossOriginpublic class UcenterMemb...
       
     
   </div>
@@ -1416,7 +1416,7 @@ webpack
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>92.3k 字</div>
+          <div>98.2k 字</div>
         </div>
       
 
@@ -1442,8 +1442,8 @@ webpack
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Tue Oct 05 2021 15:32:50 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-10-05 日</div>
+            <div id="last-update" style="display: none;">Fri Oct 08 2021 19:31:57 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2021-10-08 日</div>
           
         </div>
         
@@ -1493,7 +1493,7 @@ webpack
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-10-05 日';
+            document.getElementById('last-update-show').innerHTML = '2021-10-08 日';
           }
         </script>
         
