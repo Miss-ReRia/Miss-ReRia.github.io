@@ -1,0 +1,2677 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>【项目笔记】商城项目实战7 - Reria&#39;s BLOG</title>
+  
+    <meta name="keywords" content="SpringBoot,Vue,项目,SpringCloud,redis,微服务">
+  
+
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/mayanming696/CDN/image/sun.svg">
+  
+
+  <!-- import link -->
+  
+  
+  <link rel="stylesheet" href="/css/iconfont.css">
+  <link rel="stylesheet" href="/css/myIconColor.css">
+  <link rel="stylesheet" href="/css/myStyle.css">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+
+  <body>
+    
+
+  <header id="l_header"
+    class="l_header auto shadow floatable "
+    style='opacity: 0' >
+    <div class='container'>
+      <div id='wrapper'>
+        <div class='nav-sub'>
+          <p class="title"></p>
+          <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+            <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+            
+              <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+              
+          </ul>
+        </div>
+        <div class="nav-main">
+          
+            
+              <a class="title flat-box" target="_self" href='/'>
+                
+                  <img no-lazy class='logo' src='https://gitee.com/ReRia/images/raw/master/img/58.png' />
+                  
+                    
+                        
+              </a>
+              
+
+                <div class='menu navigation'>
+                  <ul class='nav-list-h m-pc'>
+                    
+                      
+                                  
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                                  
+                                        
+                                              
+                                                id="home"
+                                                  >
+                                                    <i class='fas fa-fan fa-spin fa-fw'></i>
+                                                      
+                                                        主页
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" 
+                                  
+                                        
+                                              >
+                                                    <i class='fas fa-paper-plane fa-fw'></i>
+                                                      
+                                                        博文
+                                </a>
+                                
+                                  <ul class="list-v">
+                                    
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                                  
+                                        
+                                              
+                                                id="categories"
+                                                  >
+                                                    <i class='fas fa-folder-open fa-fw'></i>
+                                                      
+                                                        分类
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                                  
+                                        
+                                              
+                                                id="tags"
+                                                  >
+                                                    <i class='fas fa-tags fa-fw'></i>
+                                                      
+                                                        标签
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                                  
+                                        
+                                              
+                                                id="archives"
+                                                  >
+                                                    <i class='fas fa-archive fa-fw'></i>
+                                                      
+                                                        归档
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                  </ul>
+                                  
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" 
+                                  
+                                        
+                                              >
+                                                    <i class='fas fa-map-signs fa-fw'></i>
+                                                      
+                                                        导航
+                                </a>
+                                
+                                  <ul class="list-v">
+                                    
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/artitalk/
+                                  
+                                        
+                                              
+                                                id="artitalk"
+                                                  >
+                                                    <i class='fas fa-comment-dots fa-fw'></i>
+                                                      
+                                                        说说
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                                  
+                                        
+                                              
+                                                id="bb"
+                                                  >
+                                                    <i class='iconfont icon-27shijianxian fa-fw'></i>
+                                                      
+                                                        时间线
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/bangumis/
+                                  
+                                        
+                                              
+                                                id="bangumis"
+                                                  >
+                                                    <i class='iconfont icon-bilibili fa-fw'></i>
+                                                      
+                                                        追番
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                  </ul>
+                                  
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" 
+                                  
+                                        
+                                              >
+                                                    <i class='fas fa-train fa-fw'></i>
+                                                      
+                                                        开往
+                                </a>
+                                
+                                  <ul class="list-v">
+                                    
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                                  
+                                        
+                                              
+                                                id="friends"
+                                                  >
+                                                    <i class='fas fa-link fa-fw'></i>
+                                                      
+                                                        友链
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                                  
+                                        
+                                              
+                                                id="about"
+                                                  >
+                                                    <i class='fas fa-info-circle fa-fw'></i>
+                                                      
+                                                        关于
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                  </ul>
+                                  
+                              </li>
+                              
+                                
+                                      
+                                    
+                        
+                                
+                            <li>
+                              <a class="menuitem flat-box">
+                                <i class='fas fa-compact-disc fa-spin fa-fw music'></i>
+                                音乐
+                              </a>
+                              <ul class="list-v">
+                                <li>
+                                  <div class="aplayer-container">
+                                    
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.5'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='tencent'
+      type='playlist'
+      id='8119036336'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+                                  </div>
+                                </li>
+                              </ul>
+                            <li>
+                              
+                                
+                                
+                                      
+                                    
+                        
+                            <li>
+                              <a class="menuitem flat-box header toggle-mode-btn">
+                                <i class='fas fa-moon fa-fw'></i>
+                                开/关灯
+                              </a>
+                            <li>
+                              
+                                
+                                      
+                  </ul>
+                </div>
+
+                <div id="weather"></div>
+                <script src="/js/weather.js"></script>
+
+
+                <div class="m_search">
+                  <form name="searchform" class="form u-search-form">
+                    <i class="icon fas fa-search fa-fw"></i>
+                    <input type="text" class="input u-search-input"
+                      placeholder="要搜什么呢？" />
+                  </form>
+                </div>
+
+                <ul class='switcher nav-list-h m-phone'>
+                  
+                    <li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+                    
+                      <li>
+                        <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+                        <ul class="menu-phone list-v navigation white-box">
+                          
+                            
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                                  
+                                        
+                                              
+                                                id="home"
+                                                  >
+                                                    <i class='fas fa-fan fa-spin fa-fw'></i>
+                                                      
+                                                        主页
+                                </a>
+                                
+                              </li>
+                              
+                                
+                              
+                            
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" 
+                                  
+                                        
+                                              >
+                                                    <i class='fas fa-paper-plane fa-fw'></i>
+                                                      
+                                                        博文
+                                </a>
+                                
+                                  <ul class="list-v">
+                                    
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                                  
+                                        
+                                              
+                                                id="categories"
+                                                  >
+                                                    <i class='fas fa-folder-open fa-fw'></i>
+                                                      
+                                                        分类
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                                  
+                                        
+                                              
+                                                id="tags"
+                                                  >
+                                                    <i class='fas fa-tags fa-fw'></i>
+                                                      
+                                                        标签
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                                  
+                                        
+                                              
+                                                id="archives"
+                                                  >
+                                                    <i class='fas fa-archive fa-fw'></i>
+                                                      
+                                                        归档
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                  </ul>
+                                  
+                              </li>
+                              
+                                
+                              
+                            
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" 
+                                  
+                                        
+                                              >
+                                                    <i class='fas fa-map-signs fa-fw'></i>
+                                                      
+                                                        导航
+                                </a>
+                                
+                                  <ul class="list-v">
+                                    
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/artitalk/
+                                  
+                                        
+                                              
+                                                id="artitalk"
+                                                  >
+                                                    <i class='fas fa-comment-dots fa-fw'></i>
+                                                      
+                                                        说说
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/bb/
+                                  
+                                        
+                                              
+                                                id="bb"
+                                                  >
+                                                    <i class='iconfont icon-27shijianxian fa-fw'></i>
+                                                      
+                                                        时间线
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/bangumis/
+                                  
+                                        
+                                              
+                                                id="bangumis"
+                                                  >
+                                                    <i class='iconfont icon-bilibili fa-fw'></i>
+                                                      
+                                                        追番
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                  </ul>
+                                  
+                              </li>
+                              
+                                
+                              
+                            
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" 
+                                  
+                                        
+                                              >
+                                                    <i class='fas fa-train fa-fw'></i>
+                                                      
+                                                        开往
+                                </a>
+                                
+                                  <ul class="list-v">
+                                    
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                                  
+                                        
+                                              
+                                                id="friends"
+                                                  >
+                                                    <i class='fas fa-link fa-fw'></i>
+                                                      
+                                                        友链
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                      
+                        
+                              <li>
+                                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                                  
+                                        
+                                              
+                                                id="about"
+                                                  >
+                                                    <i class='fas fa-info-circle fa-fw'></i>
+                                                      
+                                                        关于
+                                </a>
+                                
+                              </li>
+                              
+                                
+                                        
+                                  </ul>
+                                  
+                              </li>
+                              
+                                
+                              
+                            
+                        
+                                
+                                
+                                
+                              
+                            
+                        
+                            <li>
+                              <a class="menuitem flat-box header toggle-mode-btn">
+                                <i class='fas fa-moon fa-fw'></i>
+                                开/关灯
+                              </a>
+                            <li>
+                              
+                                
+                              
+                        </ul>
+                      </li>
+                </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+      <div id="l_body">
+        <div id="l_cover">
+  
+    
+        <div id="half" class='cover-wrapper post search' style="display: ;">
+          
+            <div id='cover-backstretch'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Hello world!</p>
+    
+    
+    <!-- 自定义封面滚动字体 -->
+    <div id="binft"></div>
+    <script>
+      var binft = function (r) {
+        function t() {
+          return b[Math.floor(Math.random() * b.length)]
+        }
+        function e() {
+          return String.fromCharCode(94 * Math.random() + 33)
+        }
+        function n(r) {
+          for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+            var l = document.createElement("span");
+            l.textContent = e(), l.style.color = t(), n.appendChild(l)
+          }
+          return n
+        }
+        function i() {
+          var t = o[c.skillI];
+          c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+        }
+        var l = "",
+          o = ["山有木兮木有枝，心悦君兮君不知。", "人生若只如初见，何事秋风悲画扇。", "十年生死两茫茫，不思量，自难忘。", "曾经沧海难为水，除却巫山不是云。", "洛中何郁郁，冠带自相索。", "只愿君心似我心，定不负相思意。", "愿得一心人，白头不相离。", "入我相思门，知我相思苦。"].map(function (r) {
+            return r + ""
+          }),
+          a = 2,
+          g = 1,
+          s = 5,
+          d = 75,
+          b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+          c = {
+            text: "",
+            prefixP: -s,
+            skillI: 0,
+            skillP: 0,
+            direction: "forward",
+            delay: a,
+            step: g
+          };
+        i()
+      };
+      binft(document.getElementById('binft'));
+    </script>
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="☜(ﾟヮﾟ☜)在这里输入你要查找的内容哦" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              id="home">
+              <p>主页</p>
+            </a>
+          
+            <a href="/categories/"
+              
+              
+              id="categories">
+              <p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              id="tags">
+              <p>标签</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <p>归档</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+          <div id="safearea">
+            <div class="body-wrapper" id="pjax-container">
+              
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        【项目笔记】商城项目实战7
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年11月21日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：5.9k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：24分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="【项目笔记】商城项目实战7" data-path="/2021/11/21/xiang-mu-bi-ji-shang-cheng-xiang-mu-shi-zhan-7/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <h2 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h2><h3 id="异步处理、应用解耦、流量削峰"><a href="#异步处理、应用解耦、流量削峰" class="headerlink" title="异步处理、应用解耦、流量削峰"></a>异步处理、应用解耦、流量削峰</h3><p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121110402937.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121110402937.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121110402937"></p>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121110657527.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121110657527.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121110657527"></p>
+<h3 id="消息中间件"><a href="#消息中间件" class="headerlink" title="消息中间件"></a>消息中间件</h3><blockquote>
+<ol>
+<li><p>大多应用中，可通过消息服务中间件来提升系统异步通信、扩展解耦能力</p>
+</li>
+<li><p>消息服务中两个重要概念： 消息代理（message broker）和目的地（destination）</p>
+<ul>
+<li>当消息发送者发送消息以后，将由消息代理（安装了消息中间件的服务器）接管，消息代理保证消息传递到指定目的地。</li>
+</ul>
+</li>
+<li><p>消息队列主要有两种形式的目的地</p>
+<ul>
+<li>队列（queue）：点对点消息通信（point-to-point）</li>
+<li>主题（topic）：发布（publish）/订阅（subscribe）消息通信</li>
+</ul>
+</li>
+<li><p>点对点式 ：</p>
+<ul>
+<li>消息发送者发送消息，消息代理将其放入一个队列中，消息接收者从队列中获取消息内容，消息读取后被移出队列</li>
+<li>消息只有唯一的发送者和接受者，但并不是说只能有一个接收者</li>
+</ul>
+</li>
+<li><p>发布订阅式：</p>
+<ul>
+<li>发送者（发布者）发送消息到主题，多个接收者（订阅者）监听（订阅）这个主题，那么就会在消息到达时同时收到消息  </li>
+</ul>
+</li>
+<li><p>JMS（Java Message Service）JAVA消息服务：</p>
+<ul>
+<li>基于JVM消息代理的规范。ActiveMQ、HornetMQ是JMS实现</li>
+</ul>
+</li>
+<li><p>AMQP（Advanced Message Queuing Protocol）</p>
+<ul>
+<li>高级消息队列协议，也是一个消息代理的规范，兼容JMS</li>
+<li>RabbitMQ是AMQP的实现</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121111651609.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121111651609.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121111651609"></p>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121112256879.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121112256879.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121112256879"></p>
+<h3 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h3><blockquote>
+<p>RabbitMQ是一个由erlang开发的AMQP(Advanved Message Queue Protocol)的开源实现  </p>
+<ol>
+<li><p>Message</p>
+<p>消息，消息是不具名的，它由消息头和消息体组成。消息体是不透明的，而消息头则由一系列的可选属性组成，这些属性包括routing-key（路由键）、priority（相对于其他消息的优先权）、delivery-mode（指出该消息可能需要持久性存储）等。  </p>
+</li>
+<li><p>Publisher<br>消息的生产者，也是一个向交换器发布消息的客户端应用程序  </p>
+</li>
+<li><p>Exchange</p>
+<p>交换器，用来接收生产者发送的消息并将这些消息路由给服务器中的队列。Exchange有4种类型：direct(默认)，fanout, topic, 和headers，不同类型的Exchange转发消息的策略有所区别  </p>
+</li>
+<li><p>Queue</p>
+<p>消息队列，用来保存消息直到发送给消费者。它是消息的容器，也是消息的终点。一个消息可投入一个或多个队列。消息一直在队列里面，等待消费者连接到这个队列将其取走  </p>
+</li>
+<li><p>Binding</p>
+<p>绑定，用于消息队列和交换器之间的关联。一个绑定就是基于路由键将交换器和消息队列连接起来的路由规则，所以可以将交换器理解成一个由绑定构成的路由表。Exchange 和Queue的绑定可以是多对多的关系</p>
+</li>
+<li><p>Connection<br>网络连接，比如一个TCP连接。</p>
+</li>
+<li><p>Channel<br>信道，多路复用连接中的一条独立的双向数据流通道。信道是建立在真实的TCP连接内的虚拟连接，AMQP 命令都是通过信道发出去的，不管是发布消息、订阅队列还是接收消息，这些动作都是通过信道完成。因为对于操作系统来说建立和销毁 TCP 都是非常昂贵的开销，所以引入了信道的概念，以复用一条 TCP 连接。</p>
+</li>
+<li><p>Consumer<br>消息的消费者，表示一个从消息队列中取得消息的客户端应用程序。</p>
+</li>
+<li><p>Virtual Host<br>虚拟主机，表示一批交换器、消息队列和相关对象。虚拟主机是共享相同的身份认证和加密环境的独立服务器域。每个 vhost 本质上就是一个 mini 版的 RabbitMQ 服务器，拥有自己的队列、交换器、绑定和权限机制。vhost 是 AMQP 概念的基础，必须在连接时指定，RabbitMQ 默认的 vhost 是 / 。</p>
+</li>
+<li><p>Broker<br>  表示消息队列服务器实体</p>
+</li>
+</ol>
+</blockquote>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121121330065.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121121330065.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121121330065"></p>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121120230895.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121120230895.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121120230895"></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.rabbitmq.com/networking.html">https://www.rabbitmq.com/networking.html</a>  </p>
+<p>docker run -d –name rabbitmq -p 5671:5671 -p 5672:5672 -p 4369:4369 -p 25672:25672 -p 15671:15671 -p 15672:15672 rabbitmq:management</p>
+<p>docker update rabbitmq –restart=always</p>
+<p>4369, 25672 (Erlang发现&amp;集群端口)<br>5672, 5671 (AMQP端口)<br>15672 (web管理后台端口)<br>61613, 61614 (STOMP协议端口)<br>1883, 8883 (MQTT协议端口)  </p>
+</blockquote>
+<h4 id="Exchange类型"><a href="#Exchange类型" class="headerlink" title="Exchange类型"></a>Exchange类型</h4><blockquote>
+<p>Exchange分发消息时根据类型的不同分发策略有区别，目前共四种类型：direct、fanout、topic、headers 。headers 匹配 AMQP 消息的 header 而不是路由键，headers 交换器和 direct 交换器完全一致，但性能差很多，目前几乎用不到了</p>
+</blockquote>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121123352595.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121123352595.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121123352595"></p>
+<blockquote>
+<p>消息中的路由键（routing key）如果和Binding 中的 binding key 一致， 交换器就将消息发到对应的队列中。路由键与队列名完全匹配，如果一个队列绑定到交换机要求路由键为“dog”，则只转发 routingkey 标记为“dog”的消息，不会转发“dog.puppy”，也不会转发“dog.guard”等等。它是完全匹配、单播的模式。  </p>
+</blockquote>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121123425049.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121123425049.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121123425049"></p>
+<blockquote>
+<p>每个发到 fanout 类型交换器的消息都会分到所有绑定的队列上去。fanout 交换器不处理路由键，只是简单的将队列绑定到交换器上，每个发送到交换器的消息都会被转发到与该交换器绑定的所有队列上。很像子网广播，每台子网内的主机都获得了一份复制的消息。fanout 类型转发消息是最快的。  </p>
+</blockquote>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121123429493.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121123429493.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121123429493"></p>
+<blockquote>
+<p>topic 交换器通过模式匹配分配消息的路由键属性，将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。它将路由键和绑定键的字符串切分成单词，这些单词之间用点隔开。它同样也会识别两个通配符：符号“#”和符号“<em>”。#匹配0个或多个单词，</em>匹配一个单词。  </p>
+</blockquote>
+<h3 id="spring整合"><a href="#spring整合" class="headerlink" title="spring整合"></a>spring整合</h3><h4 id="依赖、配置"><a href="#依赖、配置" class="headerlink" title="依赖、配置"></a>依赖、配置</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--  rabbitMQ  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-amqp<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableRabbit</span>   <span class="comment">// 开启rabbit</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">	<span class="attr">rabbitmq:</span></span><br><span class="line">  		<span class="attr">host:</span> <span class="number">192.168</span><span class="number">.128</span><span class="number">.129</span></span><br><span class="line">  		<span class="attr">port:</span> <span class="number">5672</span></span><br><span class="line">  		<span class="attr">virtual-host:</span> <span class="string">/</span></span><br><span class="line">  		<span class="comment"># 其他</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="AmqpAdmin"><a href="#AmqpAdmin" class="headerlink" title="AmqpAdmin"></a>AmqpAdmin</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GulimallOrderApplicationTests</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    AmqpAdmin amqpAdmin;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createExchange</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        DirectExchange directExchange = <span class="keyword">new</span> DirectExchange(<span class="string">&quot;test-direct&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</span><br><span class="line">        amqpAdmin.declareExchange(directExchange);</span><br><span class="line">        log.debug(<span class="string">&quot;Exchange[&#123;&#125;]创建成功&quot;</span>, directExchange.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Queue queue = <span class="keyword">new</span> Queue(<span class="string">&quot;test-hello&quot;</span>);</span><br><span class="line">        amqpAdmin.declareQueue(queue);</span><br><span class="line">        log.debug(<span class="string">&quot;Queue[&#123;&#125;]创建成功&quot;</span>, queue.getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">binding</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Binding binding = <span class="keyword">new</span> Binding(<span class="string">&quot;test-hello&quot;</span>, Binding.DestinationType.QUEUE, <span class="string">&quot;test-direct&quot;</span>, <span class="string">&quot;test-hello&quot;</span>, <span class="keyword">new</span> HashMap&lt;&gt;());</span><br><span class="line">        amqpAdmin.declareBinding(binding);</span><br><span class="line">        log.debug(<span class="string">&quot;Binding创建成功,目的地[&#123;&#125;]&quot;</span>, binding.getDestination());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="RabbitTemplate"><a href="#RabbitTemplate" class="headerlink" title="RabbitTemplate"></a>RabbitTemplate</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">RabbitTemplate rabbitTemplate;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sendMsg</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    OrderEntity orderEntity = <span class="keyword">new</span> OrderEntity();</span><br><span class="line">    orderEntity.setCouponId(<span class="number">1L</span>);</span><br><span class="line">    <span class="comment">// 如果消息内容是对象，默认序列化转换，所以对象类要求实现序列化</span></span><br><span class="line">    <span class="comment">// 也可以配置默认转为JSON</span></span><br><span class="line">    rabbitTemplate.convertAndSend(<span class="string">&quot;test-direct&quot;</span>, <span class="string">&quot;test-hello&quot;</span>, orderEntity);</span><br><span class="line">    log.debug(<span class="string">&quot;消息发送成功&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OrderRabbitConfig</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 配置默认MessageConverter为Jackson2JsonMessageConverter（转为JSON）</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> MessageConverter <span class="title">messageConverter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Jackson2JsonMessageConverter();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="RabbitListener、RabbitHandler"><a href="#RabbitListener、RabbitHandler" class="headerlink" title="RabbitListener、RabbitHandler"></a>RabbitListener、RabbitHandler</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 监听队列</span></span><br><span class="line"><span class="meta">@RabbitListener(queues = &#123;&quot;test-hello&quot;&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testListener</span><span class="params">(Message msg, OrderEntity content, Channel channel)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// msg 包括头+体</span></span><br><span class="line">    <span class="comment">// content 可以使用具体类型接收内容</span></span><br><span class="line">    <span class="comment">// channel 传输数据通道</span></span><br><span class="line">    log.debug(<span class="string">&quot;监听到了消息:&quot;</span> + msg + <span class="string">&quot;; 内容为:&quot;</span> + content);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ol>
+<li>订单服务启动多个的话，同一个消息只有一个客户端可以收到</li>
+<li>只有一个消息完全处理完之后，才能接收下一个消息</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol>
+<li>RabbitListener注解可以标在类、方法上（一般类上）</li>
+<li>RabbitHandler注解可以标在方法上，可以自动判断方法参数的内容类型（重载，不过方法名不需要一样）</li>
+</ol>
+</blockquote>
+<h4 id="可靠投递"><a href="#可靠投递" class="headerlink" title="可靠投递"></a>可靠投递</h4><blockquote>
+<p>保证消息不丢失，可靠抵达，可以使用事务消息，但是性能会下降，为此引入确认机制</p>
+</blockquote>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121141708505.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121141708505.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121141708505"></p>
+<p><strong>ConfirmCallback</strong></p>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121141957310.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121141957310.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121141957310"></p>
+<p><strong>ReturnCallback</strong>  </p>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121142049440.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121142049440.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121142049440"></p>
+<p><strong>Ack消息确认机制</strong> </p>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121142119941.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121142119941.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121142119941"></p>
+<h2 id="订单服务"><a href="#订单服务" class="headerlink" title="订单服务"></a>订单服务</h2><p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211121155213384.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211121155213384.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211121155213384"></p>
+<h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><blockquote>
+<p>老生常谈</p>
+</blockquote>
+<h3 id="订单登录拦截"><a href="#订单登录拦截" class="headerlink" title="订单登录拦截"></a>订单登录拦截</h3><h4 id="OrderWebConfig"><a href="#OrderWebConfig" class="headerlink" title="OrderWebConfig"></a>OrderWebConfig</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OrderWebConfig</span> <span class="keyword">implements</span> <span class="title">WebMvcConfigurer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    OrderLoginUserInterceptor loginInterceptor;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 添加拦截器</span></span><br><span class="line"><span class="comment">     * 配置拦截地址</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addInterceptors</span><span class="params">(InterceptorRegistry registry)</span> </span>&#123;</span><br><span class="line">        registry.addInterceptor(loginInterceptor).addPathPatterns(<span class="string">&quot;/**&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="OrderLoginUserInterceptor"><a href="#OrderLoginUserInterceptor" class="headerlink" title="OrderLoginUserInterceptor"></a>OrderLoginUserInterceptor</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 登录拦截</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OrderLoginUserInterceptor</span> <span class="keyword">implements</span> <span class="title">HandlerInterceptor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> ThreadLocal&lt;MemberEntityVo&gt; loginUser = <span class="keyword">new</span> ThreadLocal&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 在方法执行之前拦截</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        MemberEntityVo attribute = (MemberEntityVo) request.getSession().getAttribute(AuthServerConstant.LOGIN_USER);</span><br><span class="line">        <span class="keyword">if</span> (attribute != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">//  已登录</span></span><br><span class="line">            loginUser.set(attribute);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            request.getSession().setAttribute(<span class="string">&quot;msg&quot;</span>, <span class="string">&quot;请先登录&quot;</span>);</span><br><span class="line">            response.sendRedirect(<span class="string">&quot;http://auth.gulimall.com/login.html&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="DEBUG"><a href="#DEBUG" class="headerlink" title="DEBUG"></a>DEBUG</h4><blockquote>
+<p>OrderLoginUserInterceptor需写成如下，加入loginUser判断，否则会有cannot get session的问题</p>
+<p>debug的时候会进入两次interceptor，然后第二次拿不到session所以就会报错</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 登录拦截</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OrderLoginUserInterceptor</span> <span class="keyword">implements</span> <span class="title">HandlerInterceptor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> ThreadLocal&lt;MemberEntityVo&gt; loginUser = <span class="keyword">new</span> ThreadLocal&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 在方法执行之前拦截</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//  /order/order/status/2948294820984028420</span></span><br><span class="line">        String uri = request.getRequestURI();</span><br><span class="line">        AntPathMatcher antPathMatcher = <span class="keyword">new</span> AntPathMatcher();</span><br><span class="line">        <span class="keyword">boolean</span> match = antPathMatcher.match(<span class="string">&quot;/order/order/status/**&quot;</span>, uri);</span><br><span class="line">        <span class="keyword">boolean</span> match1 = antPathMatcher.match(<span class="string">&quot;/payed/notify&quot;</span>, uri);</span><br><span class="line">        <span class="keyword">if</span> (match || match1) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (loginUser.get() != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            MemberEntityVo attribute = (MemberEntityVo) request.getSession().getAttribute(AuthServerConstant.LOGIN_USER);</span><br><span class="line">            <span class="keyword">if</span> (attribute != <span class="keyword">null</span>) &#123;</span><br><span class="line">                loginUser.set(attribute);</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">//没登录就去登录</span></span><br><span class="line">                request.getSession().setAttribute(<span class="string">&quot;msg&quot;</span>, <span class="string">&quot;请先进行登录&quot;</span>);</span><br><span class="line">                response.sendRedirect(<span class="string">&quot;http://auth.gulimall.com/login.html&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="订单服务-确认页"><a href="#订单服务-确认页" class="headerlink" title="订单服务 - 确认页"></a>订单服务 - 确认页</h2><h3 id="Feign远程调用丢失请求头"><a href="#Feign远程调用丢失请求头" class="headerlink" title="Feign远程调用丢失请求头"></a>Feign远程调用丢失请求头</h3><h4 id="丢失请求头"><a href="#丢失请求头" class="headerlink" title="丢失请求头"></a>丢失请求头</h4><p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211122102421314.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211122102421314.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211122102421314"></p>
+<h4 id="MyFeignConfig"><a href="#MyFeignConfig" class="headerlink" title="MyFeignConfig"></a>MyFeignConfig</h4><blockquote>
+<p>题外话，跟着雷神学我现在也习惯点进源码看一看，而且不会啥也看不懂了，真不戳</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 配置feign</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyFeignConfig</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 配置请求拦截器，防止头丢失</span></span><br><span class="line">    <span class="comment">// 默认request拦截器是空,存入一个即可</span></span><br><span class="line">    <span class="meta">@Bean(&quot;requestInterceptor&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RequestInterceptor <span class="title">requestInterceptor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> RequestInterceptor() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">apply</span><span class="params">(RequestTemplate requestTemplate)</span> </span>&#123;</span><br><span class="line">                <span class="comment">// RequestContextHolder利用了ThreadLocal，存放了请求内容</span></span><br><span class="line">                ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();</span><br><span class="line">                <span class="comment">// 获得request （原请求）</span></span><br><span class="line">                HttpServletRequest request = requestAttributes.getRequest();</span><br><span class="line">                <span class="comment">// 获得cookie 并存入新请求</span></span><br><span class="line">                requestTemplate.header(<span class="string">&quot;Cookie&quot;</span>, request.getHeader(<span class="string">&quot;Cookie&quot;</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="异步情况下丢失上下文"><a href="#异步情况下丢失上下文" class="headerlink" title="异步情况下丢失上下文"></a>异步情况下丢失上下文</h4><p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211122105832624.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211122105832624.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211122105832624"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();</span><br><span class="line"> CompletableFuture&lt;Void&gt; addressFuture = CompletableFuture.runAsync(() -&gt; &#123;</span><br><span class="line"> 			<span class="comment">// 在异步请求中共享之前的请求数据</span></span><br><span class="line">            RequestContextHolder.setRequestAttributes(requestAttributes);</span><br><span class="line">&#125;, executor);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Order模块"><a href="#Order模块" class="headerlink" title="Order模块"></a>Order模块</h3><h4 id="OrderConfirmVo"><a href="#OrderConfirmVo" class="headerlink" title="OrderConfirmVo"></a>OrderConfirmVo</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 订单确认页模型</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OrderConfirmVo</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 订单防重复令牌</span></span><br><span class="line">    <span class="keyword">private</span> String orderToken;</span><br><span class="line">    <span class="comment">// 收货地址表</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;MemberAddressVo&gt; address;</span><br><span class="line">    <span class="comment">// 订单商品</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;OrderItemVo&gt; items;</span><br><span class="line">    <span class="comment">// 发票</span></span><br><span class="line">    <span class="comment">// 优惠</span></span><br><span class="line">    <span class="keyword">private</span> Integer integration;</span><br><span class="line">    <span class="keyword">private</span> BigDecimal total;</span><br><span class="line">    <span class="keyword">private</span> BigDecimal payPrice;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> BigDecimal <span class="title">getPayPrice</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> total.subtract(<span class="keyword">new</span> BigDecimal(integration));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> BigDecimal <span class="title">getTotal</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (OrderItemVo item : items) &#123;</span><br><span class="line">            total = total.add(item.getTotalPrice());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> total;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="OrderItemVo"><a href="#OrderItemVo" class="headerlink" title="OrderItemVo"></a>OrderItemVo</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OrderItemVo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Long skuId;</span><br><span class="line">    <span class="keyword">private</span> String title;</span><br><span class="line">    <span class="keyword">private</span> String image;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; skuAttr;</span><br><span class="line">    <span class="keyword">private</span> BigDecimal price;</span><br><span class="line">    <span class="keyword">private</span> Integer count;</span><br><span class="line">    <span class="keyword">private</span> BigDecimal totalPrice;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> BigDecimal <span class="title">getTotalPrice</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.price.multiply(<span class="keyword">new</span> BigDecimal(<span class="keyword">this</span>.count));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="OrderWebController"><a href="#OrderWebController" class="headerlink" title="OrderWebController"></a>OrderWebController</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 前往订单确认页</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;/toTrade&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">toConfirmPage</span><span class="params">(Model model)</span> </span>&#123;</span><br><span class="line">    OrderConfirmVo orderConfirmVo = orderService.confirmOrder();</span><br><span class="line">    model.addAttribute(<span class="string">&quot;orderConfirmData&quot;</span>, orderConfirmVo);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;confirm&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="OrderServiceImpl"><a href="#OrderServiceImpl" class="headerlink" title="OrderServiceImpl"></a>OrderServiceImpl</h4><blockquote>
+<p>feign远程调用和页面进入不同，后者会带cookie，前者没有带header所有没有cookie</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 确认订单的信息</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> OrderConfirmVo <span class="title">confirmOrder</span><span class="params">()</span> <span class="keyword">throws</span> ExecutionException, InterruptedException </span>&#123;</span><br><span class="line">    OrderConfirmVo orderConfirmVo = <span class="keyword">new</span> OrderConfirmVo();</span><br><span class="line">    <span class="comment">// TODO 设置防重复令牌</span></span><br><span class="line">    <span class="comment">// orderConfirmVo.setOrderToken();</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置收货地址 (用户id可以从拦截器中的ThreadLocal的loginUser中查找)</span></span><br><span class="line">    CompletableFuture&lt;Void&gt; addressFuture = CompletableFuture.runAsync(() -&gt; &#123;</span><br><span class="line">        R r = memberFeignService.getAddressListByMemberId(OrderLoginUserInterceptor.loginUser.get().getId());</span><br><span class="line">        <span class="keyword">if</span> (r.getCode() == <span class="number">0</span>) &#123;</span><br><span class="line">            List&lt;MemberAddressVo&gt; memberAddressVoList = r.getData(<span class="string">&quot;data&quot;</span>, <span class="keyword">new</span> TypeReference&lt;List&lt;MemberAddressVo&gt;&gt;() &#123;</span><br><span class="line">            &#125;);</span><br><span class="line">            orderConfirmVo.setAddress(memberAddressVoList);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            log.error(<span class="string">&quot;member远程调用失败&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, executor);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置购物项 （从redis中获取）</span></span><br><span class="line">    CompletableFuture&lt;Void&gt; itemFuture = CompletableFuture.runAsync(() -&gt; &#123;</span><br><span class="line">        List&lt;OrderItemVo&gt; checkedCartItems = cartFeignService.getCheckedCartItems();</span><br><span class="line">        orderConfirmVo.setItems(checkedCartItems);</span><br><span class="line">    &#125;, executor);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置总价格 (get方法已经写好了)</span></span><br><span class="line">    <span class="comment">// 设置优惠价</span></span><br><span class="line">    orderConfirmVo.setIntegration(OrderLoginUserInterceptor.loginUser.get().getIntegration());</span><br><span class="line">    <span class="comment">// 设置支付价 (get方法已经写好了)</span></span><br><span class="line"></span><br><span class="line">    CompletableFuture.allOf(itemFuture, addressFuture).get();</span><br><span class="line">    <span class="keyword">return</span> orderConfirmVo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="MemberFeignService"><a href="#MemberFeignService" class="headerlink" title="MemberFeignService"></a>MemberFeignService</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FeignClient(&quot;gulimall-member&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MemberFeignService</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取对应会员的所有收货地址</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/member/memberreceiveaddress/&#123;memberId&#125;/list&quot;)</span></span><br><span class="line">    <span class="function">R <span class="title">getAddressListByMemberId</span><span class="params">(<span class="meta">@PathVariable(&quot;memberId&quot;)</span> Long memberId)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="CartFeignService"><a href="#CartFeignService" class="headerlink" title="CartFeignService"></a>CartFeignService</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FeignClient(&quot;gulimall-cart&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CartFeignService</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 获得购物车商品</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/checkItems&quot;)</span></span><br><span class="line">    <span class="function">List&lt;OrderItemVo&gt; <span class="title">getCheckedCartItems</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Member模块"><a href="#Member模块" class="headerlink" title="Member模块"></a>Member模块</h3><h4 id="MemberReceiveAddressController"><a href="#MemberReceiveAddressController" class="headerlink" title="MemberReceiveAddressController"></a>MemberReceiveAddressController</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取对应会员的所有收货地址</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;/&#123;memberId&#125;/list&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> R <span class="title">getAddressListByMemberId</span><span class="params">(<span class="meta">@PathVariable(&quot;memberId&quot;)</span> Long memberId)</span> </span>&#123;</span><br><span class="line">    List&lt;MemberReceiveAddressEntity&gt; addressList = memberReceiveAddressService.list(<span class="keyword">new</span> QueryWrapper&lt;MemberReceiveAddressEntity&gt;().eq(<span class="string">&quot;member_id&quot;</span>, memberId));</span><br><span class="line">    <span class="keyword">return</span> R.ok().put(<span class="string">&quot;data&quot;</span>, addressList);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Cart模块"><a href="#Cart模块" class="headerlink" title="Cart模块"></a>Cart模块</h3><h4 id="CartServiceImpl"><a href="#CartServiceImpl" class="headerlink" title="CartServiceImpl"></a>CartServiceImpl</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 获取用户选中的所有商品</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;CartItemEntity&gt; <span class="title">getCheckedCartItems</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 从redis中根据userId获得cartItem</span></span><br><span class="line">    UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();</span><br><span class="line">    <span class="comment">// 封装list</span></span><br><span class="line">    List&lt;CartItemEntity&gt; cartItem = getCartItem(CartConstant.CART_PREFIX + userInfoTo.getUserId());</span><br><span class="line">    <span class="keyword">return</span> cartItem.stream().filter(CartItemEntity::getCheck).map((item) -&gt; &#123;</span><br><span class="line">                <span class="comment">// 存放在redis中的购物项的价格可能会变（冗余字段，用id去查）</span></span><br><span class="line">                <span class="comment">// 我这里就不写了</span></span><br><span class="line">                <span class="comment">// item.setPrice();</span></span><br><span class="line">                <span class="keyword">return</span> item;</span><br><span class="line">            &#125;)</span><br><span class="line">            .collect(Collectors.toList());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="CartController"><a href="#CartController" class="headerlink" title="CartController"></a>CartController</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 获得购物车商品</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;/checkItems&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;CartItemEntity&gt; <span class="title">getCheckedCartItems</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;CartItemEntity&gt; cartItemEntityList = cartService.getCheckedCartItems();</span><br><span class="line">    <span class="keyword">return</span> cartItemEntityList;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><blockquote>
+<p>怎么说呢，感觉不是很想写网页前台了，现在写给用户的还是小程序 app这种流行，网页基本就是后台管理了，再加上thymeleaf实在是让人难受，就这样吧，不写了，我把重要的业务逻辑记录一下就行。</p>
+<p>唉阻碍我的另一个原因是身体状况，突然理解了讲座的那位学长说的话，多锻炼身体，有体力才能继续啊。</p>
+</blockquote>
+<h2 id="接口幂等性"><a href="#接口幂等性" class="headerlink" title="接口幂等性"></a>接口幂等性</h2><blockquote>
+<p>接口幂等性就是用户对于同一操作发起的一次请求或者多次请求的结果是一致的， 不会因为多次点击而产生了副作用； 比如说支付场景， 用户购买了商品支付扣款成功， 但是返回结果的时候网络异常， 此时钱已经扣了， 用户再次点击按钮， 此时会进行第二次扣款， 返回结果成功， 用户查询余额返发现多扣钱了， 流水记录也变成了两条． ． ． ,这就没有保证接口的幂等性。  </p>
+</blockquote>
+<h3 id="哪些情况需要防止"><a href="#哪些情况需要防止" class="headerlink" title="哪些情况需要防止"></a>哪些情况需要防止</h3><blockquote>
+<ol>
+<li>用户多次点击按钮</li>
+<li>用户页面回退再次提交</li>
+<li>微服务互相调用， 由于网络问题， 导致请求失败。 feign 触发重试机制</li>
+<li>其他业务情况  </li>
+</ol>
+</blockquote>
+<h3 id="什么情况下需要幂等"><a href="#什么情况下需要幂等" class="headerlink" title="什么情况下需要幂等"></a>什么情况下需要幂等</h3><blockquote>
+<p>以 SQL 为例， 有些操作是天然幂等的。</p>
+<p>SELECT * FROM table WHER id=?， 无论执行多少次都不会改变状态， 是天然的幂等。<br>UPDATE tab1 SET col1=1 WHERE col2=2， 无论执行成功多少次状态都是一致的， 也是幂等操作。<br>delete from user where userid=1， 多次操作， 结果一样， 具备幂等性<br>insert into user(userid,name) values(1,’a’) 如 userid 为唯一主键， 即重复操作上面的业务， 只<br>会插入一条用户数据， 具备幂等性。  </p>
+<p>UPDATE tab1 SET col1=col1+1 WHERE col2=2， 每次执行的结果都会发生变化， 不是幂等的。<br>insert into user(userid,name) values(1,’a’) 如 userid 不是主键， 可以重复， 那上面业务多次操<br>作， 数据都会新增多条， 不具备幂等性。  </p>
+</blockquote>
+<h3 id="token-机制"><a href="#token-机制" class="headerlink" title="token 机制"></a>token 机制</h3><blockquote>
+<p>1、 服务端提供了发送 token 的接口。 我们在分析业务的时候， 哪些业务是存在幂等问题的，<br>就必须在执行业务前， 先去获取 token， 服务器会把 token 保存到 redis 中。<br>2、然后调用业务接口请求时， 把 token 携带过去， 一般放在请求头部。<br>3、 服务器判断 token 是否存在 redis 中， 存在表示第一次请求， 然后删除 token,继续执行业<br>务。<br>4、 如果判断 token 不存在 redis 中， 就表示是重复操作， 直接返回重复标记给 client， 这样<br>就保证了业务代码， 不被重复执行。</p>
+<p>危险性：<br>1、 先删除 token 还是后删除 token；<br>    (1) 先删除可能导致， 业务确实没有执行， 重试还带上之前 token， 由于防重设计导致，<br>请求还是不能执行。<br>    (2) 后删除可能导致， 业务处理成功， 但是服务闪断， 出现超时， 没有删除 token， 别<br>人继续重试， 导致业务被执行两边<br>    (3) 我们最好设计为先删除 token， 如果业务调用失败， 就重新获取 token 再次请求。<br>2、 Token 获取、 比较和删除必须是<strong>原子性</strong><br>    (1) redis.get(token) 、 token.equals、 redis.del(token)如果这两个操作不是原子， 可能导<br>致， 高并发下， 都 get 到同样的数据， 判断都成功， 继续业务并发执行<br>    (2) 可以在 redis 使用 lua 脚本完成这个操作<br>        if redis.call(‘get’, KEYS[1]) == ARGV[1] then return redis.call(‘del’, KEYS[1]) else return 0 end  </p>
+</blockquote>
+<h3 id="各种锁机制"><a href="#各种锁机制" class="headerlink" title="各种锁机制"></a>各种锁机制</h3><h4 id="数据库悲观锁"><a href="#数据库悲观锁" class="headerlink" title="数据库悲观锁"></a>数据库悲观锁</h4><blockquote>
+<p>select * from xxxx where id = 1 for update;<br>悲观锁使用时一般伴随事务一起使用， 数据锁定时间可能会很长， 需要根据实际情况选用。<br>另外要注意的是， id 字段一定是主键或者唯一索引， 不然可能造成锁表的结果， 处理起来会<br>非常麻烦。    </p>
+</blockquote>
+<h4 id="数据库乐观锁"><a href="#数据库乐观锁" class="headerlink" title="数据库乐观锁"></a>数据库乐观锁</h4><blockquote>
+<p>这种方法适合在更新的场景中，<br>update t_goods set count = count -1 , version = version + 1 where good_id=2 and version = 1<br>根据 version 版本， 也就是在操作库存前先获取当前商品的 version 版本号， 然后操作的时候<br>带上此 version 号。 我们梳理下， 我们第一次操作库存时， 得到 version 为 1， 调用库存服务<br>version 变成了 2； 但返回给订单服务出现了问题， 订单服务又一次发起调用库存服务， 当订<br>单服务传如的 version 还是 1， 再执行上面的 sql 语句时， 就不会执行； 因为 version 已经变<br>为 2 了， where 条件就不成立。 这样就保证了不管调用几次， 只会真正的处理一次。<br>乐观锁主要使用于处理读多写少的问题  </p>
+</blockquote>
+<h4 id="业务层分布式锁"><a href="#业务层分布式锁" class="headerlink" title="业务层分布式锁"></a>业务层分布式锁</h4><blockquote>
+<p>如果多个机器可能在同一时间同时处理相同的数据， 比如多台机器定时任务都拿到了相同数<br>据处理， 我们就可以加分布式锁， 锁定此数据， 处理完成后释放锁。 获取到锁的必须先判断<br>这个数据是否被处理过。  </p>
+</blockquote>
+<h3 id="各种唯一约束"><a href="#各种唯一约束" class="headerlink" title="各种唯一约束"></a>各种唯一约束</h3><h4 id="数据库唯一约束"><a href="#数据库唯一约束" class="headerlink" title="数据库唯一约束"></a>数据库唯一约束</h4><blockquote>
+<p>插入数据， 应该按照唯一索引进行插入， 比如订单号， 相同的订单就不可能有两条记录插入。<br>我们在数据库层面防止重复。<br>这个机制是利用了数据库的主键唯一约束的特性， 解决了在 insert 场景时幂等问题。 但主键<br>的要求不是自增的主键， 这样就需要业务生成全局唯一的主键。<br>如果是分库分表场景下， 路由规则要保证相同请求下， 落地在同一个数据库和同一表中， 要<br>不然数据库主键约束就不起效果了， 因为是不同的数据库和表主键不相关。  </p>
+</blockquote>
+<h4 id="redis-set-防重"><a href="#redis-set-防重" class="headerlink" title="redis set 防重"></a>redis set 防重</h4><blockquote>
+<p>很多数据需要处理， 只能被处理一次， 比如我们可以计算数据的 MD5 将其放入 redis 的 set，<br>每次处理数据， 先看这个 MD5 是否已经存在， 存在就不处理  </p>
+</blockquote>
+<h3 id="防重表"><a href="#防重表" class="headerlink" title="防重表"></a>防重表</h3><blockquote>
+<p>使用订单号 orderNo 做为去重表的唯一索引， 把唯一索引插入去重表， 再进行业务操作， 且<br>他们在同一个事务中。 这个保证了重复请求时， 因为去重表有唯一约束， 导致请求失败， 避<br>免了幂等问题。 这里要注意的是， 去重表和业务表应该在同一库中， 这样就保证了在同一个<br>事务， 即使业务操作失败了， 也会把去重表的数据回滚。 这个很好的保证了数据一致性。<br>之前说的 redis 防重也算  </p>
+</blockquote>
+<h3 id="全局请求唯一-id"><a href="#全局请求唯一-id" class="headerlink" title="全局请求唯一 id"></a>全局请求唯一 id</h3><blockquote>
+<p>调用接口时， 生成一个唯一 id， redis 将数据保存到集合中（去重） ， 存在即处理过。<br>可以使用 nginx 设置每一个请求的唯一 id；<br>proxy_set_header X-Request-Id $request_id;  </p>
+</blockquote>
+<h3 id="订单提交-token"><a href="#订单提交-token" class="headerlink" title="订单提交 token"></a>订单提交 token</h3><h4 id="添加token"><a href="#添加token" class="headerlink" title="添加token"></a>添加token</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String token = UUID.randomUUID().toString().replace(<span class="string">&quot;-&quot;</span>, <span class="string">&quot;&quot;</span>);</span><br><span class="line">redisTemplate.opsForValue().set(AuthServerConstant.USER_ORDER_TOKEN_PREFIX + memberRespVo.getId(), token, <span class="number">30</span>, TimeUnit.MINUTES);</span><br><span class="line">confirmVo.setOrderToken(token);</span><br></pre></td></tr></table></figure>
+
+<h4 id="原子验证token"><a href="#原子验证token" class="headerlink" title="原子验证token"></a>原子验证token</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Transaction</span> <span class="comment">// 本第事务，只能控制自己服务的事务</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> SubmitOrderResponseVo <span class="title">submitOrder</span><span class="params">(OrderSubmitVo vo)</span> </span>&#123;</span><br><span class="line">        confirmVoThreadLocal.set(vo);</span><br><span class="line">        SubmitOrderResponseVo response = <span class="keyword">new</span> SubmitOrderResponseVo();</span><br><span class="line">        MemberRespVo memberRespVo = LoginUserInterceptor.loginUser.get();</span><br><span class="line">        response.setCode(<span class="number">0</span>);</span><br><span class="line">        <span class="comment">//1、验证令牌【令牌的对比和删除必须保证原子性】</span></span><br><span class="line">        <span class="comment">//0令牌失败 - 1删除成功</span></span><br><span class="line">        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">        String orderToken = vo.getOrderToken();</span><br><span class="line">        <span class="comment">//原子验证令牌和删除令牌</span></span><br><span class="line">        Long result = redisTemplate.execute(<span class="keyword">new</span> DefaultRedisScript&lt;Long&gt;(script, Long.class), Arrays.asList(OrderConstant.USER_ORDER_TOKEN_PREFIX + memberRespVo.getId()), orderToken);</span><br><span class="line">        <span class="keyword">if</span> (result == <span class="number">0L</span>) &#123;</span><br><span class="line">            <span class="comment">//令牌验证失败</span></span><br><span class="line">            response.setCode(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">return</span> response;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//令牌验证成功</span></span><br><span class="line">            <span class="comment">//下单：去创建订单，验令牌，验价格，锁库存...</span></span><br><span class="line">            <span class="comment">//1、创建订单，订单项等信息</span></span><br><span class="line">            OrderCreateTo order = createOrder();</span><br><span class="line">            <span class="comment">//2、验价</span></span><br><span class="line">            BigDecimal payAmount = order.getOrder().getPayAmount();</span><br><span class="line">            BigDecimal payPrice = vo.getPayPrice();</span><br><span class="line">            <span class="keyword">if</span> (Math.abs(payAmount.subtract(payPrice).doubleValue()) &lt; <span class="number">0.01</span>) &#123;</span><br><span class="line">                <span class="comment">//金额对比</span></span><br><span class="line">                <span class="comment">//....</span></span><br><span class="line">                <span class="comment">//TODO 3、保存订单</span></span><br><span class="line">                saveOrder(order);</span><br><span class="line">                <span class="comment">//4、库存锁定。只要有异常回滚订单数据。</span></span><br><span class="line">                <span class="comment">// 订单号，所有订单项（skuId，skuName，num）</span></span><br><span class="line">                WareSkuLockVo lockVo = <span class="keyword">new</span> WareSkuLockVo();</span><br><span class="line">                lockVo.setOrderSn(order.getOrder().getOrderSn());</span><br><span class="line">                List&lt;OrderItemVo&gt; locks = order.getOrderItems().stream().map(item -&gt; &#123;</span><br><span class="line">                    OrderItemVo itemVo = <span class="keyword">new</span> OrderItemVo();</span><br><span class="line">                    itemVo.setSkuId(item.getSkuId());</span><br><span class="line">                    itemVo.setCount(item.getSkuQuantity());</span><br><span class="line">                    itemVo.setTitle(item.getSkuName());</span><br><span class="line">                    <span class="keyword">return</span> itemVo;</span><br><span class="line">                &#125;).collect(Collectors.toList());</span><br><span class="line">                lockVo.setLocks(locks);</span><br><span class="line">                <span class="comment">//4、远程锁库存</span></span><br><span class="line">                <span class="comment">//库存成功了，但是网络原因超时了，订单回滚，库存不滚。</span></span><br><span class="line"></span><br><span class="line">                <span class="comment">//为了保证高并发。库存服务自己回滚。可以发消息给库存服务；</span></span><br><span class="line">                <span class="comment">//库存服务本身也可以使用自动解锁模式  消息</span></span><br><span class="line">                R r = wmsFeignService.orderLockStock(lockVo);</span><br><span class="line">                <span class="keyword">if</span> (r.getCode() == <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="comment">//锁成功了</span></span><br><span class="line">                    response.setOrder(order.getOrder());</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//TODO 5、远程扣减积分 出异常</span></span><br><span class="line"><span class="comment">//                    int i = 10/0; //订单回滚，库存不滚</span></span><br><span class="line">                    <span class="comment">//订单创建成功发送消息给MQ</span></span><br><span class="line">                    rabbitTemplate.convertAndSend(<span class="string">&quot;order-event-exchange&quot;</span>, <span class="string">&quot;order.create.order&quot;</span>, order.getOrder());</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//TODO 6、清除购物车已经下单的商品</span></span><br><span class="line">                    <span class="keyword">return</span> response;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">//锁定失败</span></span><br><span class="line">                    String msg = (String) r.get(<span class="string">&quot;msg&quot;</span>);</span><br><span class="line">                    <span class="keyword">throw</span> <span class="keyword">new</span> NoStockException(msg);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                response.setCode(<span class="number">2</span>);</span><br><span class="line">                <span class="keyword">return</span> response;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h2><h3 id="本地事务"><a href="#本地事务" class="headerlink" title="本地事务"></a>本地事务</h3><blockquote>
+<p>详见文档                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </p>
+</blockquote>
+<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20211124185045824.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20211124185045824.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211124185045824"></p>
+<h4 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h4><blockquote>
+<p>READ UNCOMMITTED（读未提交）<br>该隔离级别的事务会读到其它未提交事务的数据， 此现象也称之为脏读。</p>
+<p>READ COMMITTED（ 读提交）<br>一个事务可以读取另一个已提交的事务， 多次读取会造成不一样的结果， 此现象称为不可重<br>复读问题， Oracle 和 SQL Server 的默认隔离级别。</p>
+<p>REPEATABLE READ（ 可重复读）<br>该隔离级别是 MySQL 默认的隔离级别， 在同一个事务里， select 的结果是事务开始时时间<br>点的状态， 因此， 同样的 select 操作读到的结果会是一致的， 但是， 会有幻读现象。 MySQL<br>的 InnoDB 引擎可以通过 next-key locks 机制（ 参考下文”行锁的算法”一节） 来避免幻读。</p>
+<p>SERIALIZABLE（ 序列化）<br>在该隔离级别下事务都是串行顺序执行的， MySQL 数据库的 InnoDB 引擎会给读操作隐式<br>加一把读共享锁， 从而避免了脏读、 不可重读复读和幻读问题。  </p>
+</blockquote>
+<h4 id="事务的传播行为"><a href="#事务的传播行为" class="headerlink" title="事务的传播行为"></a>事务的传播行为</h4><blockquote>
+<p>1、 PROPAGATION_REQUIRED： 如果当前没有事务， 就创建一个新事务， 如果当前存在事务，<br>就加入该事务， 该设置是最常用的设置。<br>2、 PROPAGATION_SUPPORTS： 支持当前事务， 如果当前存在事务， 就加入该事务， 如果当<br>前不存在事务， 就以非事务执行。<br>3、 PROPAGATION_MANDATORY： 支持当前事务， 如果当前存在事务， 就加入该事务， 如果<br>当前不存在事务， 就抛出异常。<br>4、 PROPAGATION_REQUIRES_NEW： 创建新事务， 无论当前存不存在事务， 都创建新事务。<br>5、 PROPAGATION_NOT_SUPPORTED： 以非事务方式执行操作， 如果当前存在事务， 就把当<br>前事务挂起。<br>6、 PROPAGATION_NEVER： 以非事务方式执行， 如果当前存在事务， 则抛出异常。<br>7、 PROPAGATION_NESTED： 如果当前存在事务， 则在嵌套事务内执行。 如果当前没有事务，<br>则执行与 PROPAGATION_REQUIRED 类似的操作  </p>
+</blockquote>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-11-24T18:56:34+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年11月24日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SpringBoot/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SpringBoot</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Vue</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>项目</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SpringCloud/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SpringCloud</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/redis/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>redis</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>微服务</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/11/21/xiang-mu-bi-ji-shang-cheng-xiang-mu-shi-zhan-7/&title=【项目笔记】商城项目实战7 - Reria's BLOG&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/11/21/xiang-mu-bi-ji-shang-cheng-xiang-mu-shi-zhan-7/&title=【项目笔记】商城项目实战7 - Reria's BLOG&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/11/21/xiang-mu-bi-ji-shang-cheng-xiang-mu-shi-zhan-7/&title=【项目笔记】商城项目实战7 - Reria's BLOG&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2021/11/17/xiang-mu-bi-ji-shang-cheng-xiang-mu-shi-zhan-6/'>
+          <p class='title'>【项目笔记】商城项目实战6<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>认证服务 - 短信验证码基础环境搭建配置
+开启nacos，feign
+
+123456789101112131415161718192021# springspring:  # nacos 注册中...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow floatable" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+<section class="widget page shadow floatable desktop">
+  
+  <header>
+    
+      <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      
+        <article id="page" class="post article-type-page" itemscope itemprop="blogPost">
+          <section class="article typo">
+            <div class="article-entry" itemprop="articleBody">
+              
+                <p>本站默认替换了右键菜单，<br>如需唤醒原系统菜单请使用：<br>        <kbd>ctrl</kbd> + <kbd>右键</kbd></p>
+
+              
+            </div>
+          </section>
+        </article>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow floatable desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97"><span class="toc-number">1.</span> <span class="toc-text">消息队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86%E3%80%81%E5%BA%94%E7%94%A8%E8%A7%A3%E8%80%A6%E3%80%81%E6%B5%81%E9%87%8F%E5%89%8A%E5%B3%B0"><span class="toc-number">1.1.</span> <span class="toc-text">异步处理、应用解耦、流量削峰</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">消息中间件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RabbitMQ"><span class="toc-number">1.3.</span> <span class="toc-text">RabbitMQ</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.3.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Exchange%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.2.</span> <span class="toc-text">Exchange类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spring%E6%95%B4%E5%90%88"><span class="toc-number">1.4.</span> <span class="toc-text">spring整合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E3%80%81%E9%85%8D%E7%BD%AE"><span class="toc-number">1.4.1.</span> <span class="toc-text">依赖、配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AmqpAdmin"><span class="toc-number">1.4.2.</span> <span class="toc-text">AmqpAdmin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RabbitTemplate"><span class="toc-number">1.4.3.</span> <span class="toc-text">RabbitTemplate</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RabbitListener%E3%80%81RabbitHandler"><span class="toc-number">1.4.4.</span> <span class="toc-text">RabbitListener、RabbitHandler</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E9%9D%A0%E6%8A%95%E9%80%92"><span class="toc-number">1.4.5.</span> <span class="toc-text">可靠投递</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A2%E5%8D%95%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.</span> <span class="toc-text">订单服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">2.1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A2%E5%8D%95%E7%99%BB%E5%BD%95%E6%8B%A6%E6%88%AA"><span class="toc-number">2.2.</span> <span class="toc-text">订单登录拦截</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#OrderWebConfig"><span class="toc-number">2.2.1.</span> <span class="toc-text">OrderWebConfig</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OrderLoginUserInterceptor"><span class="toc-number">2.2.2.</span> <span class="toc-text">OrderLoginUserInterceptor</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DEBUG"><span class="toc-number">2.2.3.</span> <span class="toc-text">DEBUG</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A2%E5%8D%95%E6%9C%8D%E5%8A%A1-%E7%A1%AE%E8%AE%A4%E9%A1%B5"><span class="toc-number">3.</span> <span class="toc-text">订单服务 - 确认页</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Feign%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E4%B8%A2%E5%A4%B1%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="toc-number">3.1.</span> <span class="toc-text">Feign远程调用丢失请求头</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A2%E5%A4%B1%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="toc-number">3.1.1.</span> <span class="toc-text">丢失请求头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MyFeignConfig"><span class="toc-number">3.1.2.</span> <span class="toc-text">MyFeignConfig</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E6%83%85%E5%86%B5%E4%B8%8B%E4%B8%A2%E5%A4%B1%E4%B8%8A%E4%B8%8B%E6%96%87"><span class="toc-number">3.1.3.</span> <span class="toc-text">异步情况下丢失上下文</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Order%E6%A8%A1%E5%9D%97"><span class="toc-number">3.2.</span> <span class="toc-text">Order模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#OrderConfirmVo"><span class="toc-number">3.2.1.</span> <span class="toc-text">OrderConfirmVo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OrderItemVo"><span class="toc-number">3.2.2.</span> <span class="toc-text">OrderItemVo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OrderWebController"><span class="toc-number">3.2.3.</span> <span class="toc-text">OrderWebController</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OrderServiceImpl"><span class="toc-number">3.2.4.</span> <span class="toc-text">OrderServiceImpl</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MemberFeignService"><span class="toc-number">3.2.5.</span> <span class="toc-text">MemberFeignService</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CartFeignService"><span class="toc-number">3.2.6.</span> <span class="toc-text">CartFeignService</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Member%E6%A8%A1%E5%9D%97"><span class="toc-number">3.3.</span> <span class="toc-text">Member模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MemberReceiveAddressController"><span class="toc-number">3.3.1.</span> <span class="toc-text">MemberReceiveAddressController</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cart%E6%A8%A1%E5%9D%97"><span class="toc-number">3.4.</span> <span class="toc-text">Cart模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CartServiceImpl"><span class="toc-number">3.4.1.</span> <span class="toc-text">CartServiceImpl</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CartController"><span class="toc-number">3.4.2.</span> <span class="toc-text">CartController</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TODO"><span class="toc-number">4.</span> <span class="toc-text">TODO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text">接口幂等性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%AA%E4%BA%9B%E6%83%85%E5%86%B5%E9%9C%80%E8%A6%81%E9%98%B2%E6%AD%A2"><span class="toc-number">5.1.</span> <span class="toc-text">哪些情况需要防止</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E9%9C%80%E8%A6%81%E5%B9%82%E7%AD%89"><span class="toc-number">5.2.</span> <span class="toc-text">什么情况下需要幂等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#token-%E6%9C%BA%E5%88%B6"><span class="toc-number">5.3.</span> <span class="toc-text">token 机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E9%94%81%E6%9C%BA%E5%88%B6"><span class="toc-number">5.4.</span> <span class="toc-text">各种锁机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%82%B2%E8%A7%82%E9%94%81"><span class="toc-number">5.4.1.</span> <span class="toc-text">数据库悲观锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%90%E8%A7%82%E9%94%81"><span class="toc-number">5.4.2.</span> <span class="toc-text">数据库乐观锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%9A%E5%8A%A1%E5%B1%82%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81"><span class="toc-number">5.4.3.</span> <span class="toc-text">业务层分布式锁</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E5%94%AF%E4%B8%80%E7%BA%A6%E6%9D%9F"><span class="toc-number">5.5.</span> <span class="toc-text">各种唯一约束</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%94%AF%E4%B8%80%E7%BA%A6%E6%9D%9F"><span class="toc-number">5.5.1.</span> <span class="toc-text">数据库唯一约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#redis-set-%E9%98%B2%E9%87%8D"><span class="toc-number">5.5.2.</span> <span class="toc-text">redis set 防重</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E9%87%8D%E8%A1%A8"><span class="toc-number">5.6.</span> <span class="toc-text">防重表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E8%AF%B7%E6%B1%82%E5%94%AF%E4%B8%80-id"><span class="toc-number">5.7.</span> <span class="toc-text">全局请求唯一 id</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A2%E5%8D%95%E6%8F%90%E4%BA%A4-token"><span class="toc-number">5.8.</span> <span class="toc-text">订单提交 token</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0token"><span class="toc-number">5.8.1.</span> <span class="toc-text">添加token</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%AD%90%E9%AA%8C%E8%AF%81token"><span class="toc-number">5.8.2.</span> <span class="toc-text">原子验证token</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1"><span class="toc-number">6.</span> <span class="toc-text">分布式事务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E4%BA%8B%E5%8A%A1"><span class="toc-number">6.1.</span> <span class="toc-text">本地事务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E7%9A%84%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">6.1.1.</span> <span class="toc-text">事务的隔离级别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E7%9A%84%E4%BC%A0%E6%92%AD%E8%A1%8C%E4%B8%BA"><span class="toc-number">6.1.2.</span> <span class="toc-text">事务的传播行为</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+                
+                      <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="【项目笔记】商城项目实战7";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.remove("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="half";
+    cover_wrapper.style.display="";
+    
+  
+</script>
+
+            </div>
+            
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.5'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='tencent'
+      type='playlist'
+      id='8119036336'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        
+          <div><p><br>🧡💛💚💙💜🖤🤍</p>
+</div>
+        
+      
+    
+  </footer>
+
+
+              <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+          </div>
+      </div>
+      <div>
+        <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://bing.ioliu.cn/v1/rand?w=1920&h=1200"];
+        if ('false' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $.backstretch(
+            imgs,
+          {
+            duration: "10000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/categories/
+        
+        
+        
+        
+          id="categories"
+        >
+        <i class='fas fa-folder-open fa-fw'></i> 所有分类
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/tags/
+        
+        
+        
+        
+          id="tags"
+        >
+        <i class='fas fa-tags fa-fw'></i> 所有标签
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=/archives/
+        
+        
+        
+        
+          id="archives"
+        >
+        <i class='fas fa-archive fa-fw'></i> 归档
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> 开/关灯
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
+        // 如果有aplayer，初始化一下
+        checkAPlayer();
+      }
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+	volantis.pjax.push(pjax_initCopyCode)
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+  volantis.pjax.push(pjax_scrollrebeal)
+</script>
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '8119036336';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.5';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "在这里写评论哦~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"在这里写评论哦~","appId":"hDBihxHSDX3Dq2XdPVRwIrGp-MdYXbMMI","appKey":"1oBqjeOHf3of5LJw7B2BrE2f","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"mp","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false,"js":"https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  volantis.pjax.push(pjax_valine);
+</script>
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'yzv0f6bIu6hXwO0xqrI358Js-gzGzoHsz',
+    app_key: 'dJh5SEjH7EoUIgUcd2VxqUun',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://example.com' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+
+          
+            
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk/", "/bb/", "/bangumis/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+              
+      </div>
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1.5,"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","left":36,"width":150,"height":230,"hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+
+</html>
+
+
+<!-- 浏览器搞笑标题 -->
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
+
+<!-- 单击显示文字 -->
+<!-- <script type="text/javascript" src="/js/click_show_text.js"></script> -->
+
+<!-- 单击显示特效 -->
+<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_click.js"></script>

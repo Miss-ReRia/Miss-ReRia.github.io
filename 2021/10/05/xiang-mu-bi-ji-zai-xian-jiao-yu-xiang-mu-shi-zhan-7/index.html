@@ -924,7 +924,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="service"><a href="#service" class="headerlink" title="service"></a>service</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// echatrts图表显示@Overridepublic Map&lt;String, Object&gt; getChartData(String type, String begin, String end) &#123;    // 指定日期范围    QueryWrapper&lt;StatisticsDaily&gt; wrapper = new QueryWrapper&lt;&gt;();    wrapper.between(&quot;date_calculated&quot;, begin, end);    // 这里要求前端的传递的value和表中对应字段值相同，select指定查询列    wrapper.select(&quot;date_calculated&quot;, type);    List&lt;StatisticsDaily&gt; staDataList = baseMapper.selectList(wrapper);    //前端要求数组json结构，对应后端java代码是list集合    //创建两个list集合，一个日期list，一个数量list    List&lt;String&gt; dateList = new ArrayList&lt;&gt;();    List&lt;Integer&gt; numList = new ArrayList&lt;&gt;();    //遍历查询所有数据list集合，进行封装    for (int i = 0; i &lt; staDataList.size(); i++) &#123;        StatisticsDaily daily = staDataList.get(i);        //封装日期list集合        dateList.add(daily.getDateCalculated());        //封装对应选择的数量        switch (type) &#123;            case &quot;login_num&quot;:                numList.add(daily.getLoginNum());                break;            case &quot;register_num&quot;:                numList.add(daily.getRegisterNum());                break;            case &quot;video_view_num&quot;:                numList.add(daily.getVideoViewNum());                break;            case &quot;course_num&quot;:                numList.add(daily.getCourseNum());                break;            default:                break;        &#125;    &#125;    //把封装之后两个list集合放到map集合，进行返回    Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();    map.put(&quot;dateList&quot;, dateList);    map.put(&quot;numList&quot;, numList);    return map;&#125;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><h4 id="引入npm依赖"><a href="#引入npm依赖" class="headerlink" title="引入npm依赖"></a>引入npm依赖</h4><blockquote>
-<p>npm install –save <a href="mailto:&#x65;&#99;&#104;&#x61;&#114;&#x74;&#115;&#64;&#x34;&#46;&#x31;&#x2e;&#x30;">&#x65;&#99;&#104;&#x61;&#114;&#x74;&#115;&#64;&#x34;&#46;&#x31;&#x2e;&#x30;</a></p>
+<p>npm install –save <a href="mailto:&#x65;&#x63;&#x68;&#97;&#114;&#116;&#115;&#64;&#52;&#46;&#x31;&#x2e;&#48;">&#x65;&#x63;&#x68;&#97;&#114;&#116;&#115;&#64;&#52;&#46;&#x31;&#x2e;&#48;</a></p>
 </blockquote>
 <h4 id="api-1"><a href="#api-1" class="headerlink" title="api"></a>api</h4><blockquote>
 <p>这里没有使用RequestBody传递对象，而是直接前端调用的时候传递对象取对应值</p>
@@ -1235,8 +1235,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='content'>
     
       
-    
-      
         <article id="page" class="post article-type-page" itemscope itemprop="blogPost">
           <section class="article typo">
             <div class="article-entry" itemprop="articleBody">
@@ -1267,6 +1265,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
     
+      
+    
+    
+      
+    
+      
     
       
     
