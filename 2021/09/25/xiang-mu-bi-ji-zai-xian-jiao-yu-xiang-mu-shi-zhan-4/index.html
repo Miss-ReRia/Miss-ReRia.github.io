@@ -1013,7 +1013,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="springcloud微服务（删除小节功能完善）"><a href="#springcloud微服务（删除小节功能完善）" class="headerlink" title="springcloud微服务（删除小节功能完善）"></a>springcloud微服务（删除小节功能完善）</h2><h3 id="springcloud"><a href="#springcloud" class="headerlink" title="springcloud"></a>springcloud</h3><blockquote>
 <p>服务集合，TODO</p>
 </blockquote>
-<h4 id="springcloud调用接口过程"><a href="#springcloud调用接口过程" class="headerlink" title="springcloud调用接口过程"></a>springcloud调用接口过程</h4><p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20210927131506299.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20210927131506299.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210927131506299"></p>
+<h4 id="springcloud调用接口过程"><a href="#springcloud调用接口过程" class="headerlink" title="springcloud调用接口过程"></a>springcloud调用接口过程</h4><p><img src="https://reria-images.oss-cn-hangzhou.aliyuncs.com/img01/images-master/img/image-20210927131506299.png" class="lazyload" data-srcset="https://reria-images.oss-cn-hangzhou.aliyuncs.com/img01/images-master/img/image-20210927131506299.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210927131506299"></p>
 <h3 id="Nacos服务注册"><a href="#Nacos服务注册" class="headerlink" title="Nacos服务注册"></a>Nacos服务注册</h3><blockquote>
 <p>注册中心</p>
 <p><a target="_blank" rel="noopener" href="https://nacos.io/zh-cn/">home (nacos.io)</a></p>
@@ -1044,7 +1044,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="Feign服务调用"><a href="#Feign服务调用" class="headerlink" title="Feign服务调用"></a>Feign服务调用</h3><blockquote>
 <p>前提条件：将互相调用的服务在nacos注册完毕</p>
 </blockquote>
-<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20210927094513074.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20210927094513074.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210927094513074"></p>
+<p><img src="https://reria-images.oss-cn-hangzhou.aliyuncs.com/img01/images-master/img/image-20210927094513074.png" class="lazyload" data-srcset="https://reria-images.oss-cn-hangzhou.aliyuncs.com/img01/images-master/img/image-20210927094513074.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210927094513074"></p>
 <h4 id="依赖-1"><a href="#依赖-1" class="headerlink" title="依赖"></a>依赖</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--服务调用--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-openfeign<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="添加注解"><a href="#添加注解" class="headerlink" title="添加注解"></a>添加注解</h4><blockquote>
@@ -1057,7 +1057,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>注意结构（service_edu要调用service_vod的功能）</p>
 <p>@ Feignclient注解用于指定从哪个服务中调用功能,名称与被调用的服务名保持致。<br>@ GetMapping注解用于对被调用的微服务进行地址映射<br>@ PathVariable注解定要指定参数名称,否则出错<br>@ Component注解防止,在其他位置注入 Codclient时idea报错</p>
 </blockquote>
-<p><img src="https://gitee.com/ReRia/images/raw/master/img/image-20210927095233245.png" class="lazyload" data-srcset="https://gitee.com/ReRia/images/raw/master/img/image-20210927095233245.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210927095233245"></p>
+<p><img src="https://reria-images.oss-cn-hangzhou.aliyuncs.com/img01/images-master/img/image-20210927095233245.png" class="lazyload" data-srcset="https://reria-images.oss-cn-hangzhou.aliyuncs.com/img01/images-master/img/image-20210927095233245.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210927095233245"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FeignClient(&quot;service-vod&quot;)</span> <span class="comment">// 调用服务（服务名），这里的服务名要和对应服务的配置文件中的spring.application.name对应</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">VodClient</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 定义要调用的方法的路径（注意要完全路径）</span></span><br><span class="line">    <span class="comment">// 根据id删除视频</span></span><br><span class="line">    <span class="meta">@DeleteMapping(&quot;/eduvod/video/removeVideo/&#123;videoId&#125;&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> R <span class="title">removeVideo</span><span class="params">(<span class="meta">@PathVariable(&quot;videoId&quot;)</span> String videoId)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -1141,10 +1141,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-10-05T15:31:31+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2022-06-16T19:52:31+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年10月5日</p>
+    <p>更新于：2022年6月16日</p>
   </a>
 </div>
 
@@ -1228,7 +1228,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 搭建项目前台环境
 使用服务端渲染技术NuxtJS框架
 
-![02 搭建项目前台环境（nuxt）](https://gitee.com/ReRia/images/raw/m...</p>
+![02 搭建项目前台环境（nuxt）](https://reria-images.oss-cn-hangzhou...</p>
         </a>
       
       
